@@ -5031,6 +5031,10 @@ body {
     .feed-section .feed .rating .text {
       display: inline-block;
       font-size: 12px; }
+  .feed-section .feed .thumbnail {
+    margin: 10px !important;
+    height: 88px;
+    width: 112px; }
   .feed-section .feed .post-timestamp {
     font-size: 12px; }
   .feed-section .feed .post-title, .feed-section .feed .post-timestamp, .feed-section .feed .inline {

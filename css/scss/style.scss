@@ -59,7 +59,11 @@ body {
     			font-size: 12px;
     		}
     	}
-    	.thumbnail {}
+    	.thumbnail {
+            margin: 10px !important;
+            height: 88px;
+            width: 112px;
+        }
 
     	.post-timestamp {
     		font-size: 12px;

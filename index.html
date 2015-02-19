@@ -5,14 +5,15 @@
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
 
     <title>AxeHut</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+<!--     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.min.css" rel="stylesheet"> -->
 
     <!-- Custom CSS -->
     <link href="css/style.css" rel="stylesheet">
@@ -103,10 +104,10 @@
                     <div class="rating"><h4>{{post.rating | percentage}}<span class="text">Deserved It</span></h4></div>
                 </div>
                 <div class="col-xs-2">
-                    <div class="thumbnail">{{post.thumbnail}}</div>
+                    <div class="thumbnail"><img src="{{post.thumbnail}}"></div>
                 </div>
                 <div class="col-xs-8">
-                    <div class="post-title"><h4>{{post.title}}</div>
+                    <div class="post-title"><h4>{{post.title}}</h4></div>
                     <div class="post-timestamp"><p>Submitted {{post.timestamp}} hours ago by <span class="user">{{post.user}}</span></p></div>
                     <div class="inline">
                         <span class="post-comments">{{post.comments}} comments</span>
@@ -116,6 +117,7 @@
                         <span><a data-target="#save">Save</a></span>
                         <span><a data-target="#report">Report</a></span>
                     </div>
+                </div>
             </div>
         </div>
 
@@ -159,7 +161,6 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/bootstrap-responsive.min.js"></script>
 
     <!-- Scrolling Nav JavaScript -->
     <script src="js/jquery.easing.min.js"></script>
