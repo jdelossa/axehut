@@ -1,0 +1,113 @@
+@import "bootstrap.scss";
+
+$base-color: #856298;
+$lightest-color: #d394e2;
+$darkest-color: #5B3256;
+$white: #ffffff;
+
+/******************************* HTML Elements *******************************/
+html {
+  position: relative; /* Sticky Footer Style */
+  min-height: 100%; /* Sticky Footer Style */
+}
+body {
+  margin-bottom: 300px; /* Margin bottom by footer height */
+}
+
+/******************************* Universal styles  *******************************/
+.row-centered {
+	text-align: center;
+}
+/******************************* Navbar fixed top *******************************/
+.navbar-fixed-top {
+	.fa {
+		color: $base-color;
+		font-size: 1.1em;
+	}
+}
+/******************************* Header static top *******************************/
+.header-default {
+	@extend .navbar-default;
+	background-color: $base-color;
+	height: 30vh;
+}
+.header-static-top {
+	@extend .navbar-static-top;
+}
+
+/******************************* Feed *******************************/
+.feed-section {
+    height: 100%;
+    text-align: center;
+    background: #fff;
+
+    .input-group {
+    	margin: 50px 0;
+    }
+
+    .feed {
+    	.rating {
+    		background-color: $lightest-color;
+    		color: $white;
+    		font-size: 20px;
+    		padding: 15px 20px;
+    		margin: 10px;
+    		border-radius: 5px;
+
+    		.text {
+    			display: inline-block;
+    			font-size: 12px;
+    		}
+    	}
+    	.thumbnail {}
+
+    	.post-timestamp {
+    		font-size: 12px;
+    	}
+    	.post-title, .post-timestamp, .inline {
+    		text-align: left;
+    	}
+    	
+    		.label {
+    			background-color: $darkest-color;
+    		}
+    	
+    }
+}
+/******************************* Footer *******************************/
+.footer {
+	padding: 40px 0;
+	background-color: $darkest-color;
+	color: $white;
+	/* Sticky Footer Styles */
+	position: absolute;
+  	bottom: 0;
+  	width: 100%;
+  	height: 190px;
+
+	a, &:hover {
+		color: $white;
+	}
+
+	.footer-logo {
+		a {
+			font-size: 20px;
+			font-weight: bold;
+		}
+	}
+}
+
+/******************************* Media Queries *******************************/
+@media(min-width:767px) {
+    .navbar {
+        padding: 20px 0;
+        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        transition: background .5s ease-in-out,padding .5s ease-in-out;
+    }
+
+    .top-nav-collapse {
+        padding: 0;
+    }
+}
+
