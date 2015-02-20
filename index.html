@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="feed">
 
 <head>
 
@@ -34,7 +34,7 @@
 
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-        <div class="container">
+        <div class="container-fluid">
             <div class="navbar-header page-scroll">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
                     <span class="sr-only">Toggle navigation</span>
@@ -48,109 +48,168 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                    <!-- <li class="hidden">
-                        <a class="page-scroll" href="#page-top"></a>
-                    </li> -->
                     <li>
-                        <a class="page-scroll" href="#"><i class="fa fa-heart"></i></a>
+                        <a href="#" data-toggle="tooltip" data-placement="bottom" title="Favorites" class="hidden-xs"><i class="fa fa-heart"></i></a>
+                        <a href="#" class="visible-xs">Favorites</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#"><i class="fa fa-user"></i></a>
+                        <a href="#" data-toggle="tooltip" data-placement="bottom" title="Profile" class="hidden-xs"><i class="fa fa-user"></i></a>
+                        <a href="#" class="visible-xs">Profile</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#"><i class="fa fa-envelope"></i></a>
+                        <a href="#" data-toggle="tooltip" data-placement="bottom" title="Messages" class="hidden-xs"><i class="fa fa-envelope"></i></a>
+                        <a href="#" class="visible-xs">Messages</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#"><i class="fa fa-cog"></i></a>
+                        <a href="#" data-toggle="tooltip" data-placement="bottom" title="Settings" class="hidden-xs"><i class="fa fa-cog"></i></a>
+                        <a href="#" class="visible-xs">Settings</a>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-sign-out"></i></a>
+                        <a href="#" data-toggle="tooltip" data-placement="bottom" title="Sign Out" class="hidden-xs"><i class="fa fa-sign-out"></i></a>
+                        <a href="#" class="visible-xs">Sign Out</a>
                     </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
         </div>
-        <!-- /.container -->
+        <!-- /.container-fluid -->
     </nav>
 
     <!-- Header Static Top -->
-    <div class="header-default header-static-top"></div>
+    <div class="header-default header-static-top">
+        <h3>Did You Deserve The Axe?</h3>
+    </div>
 
     <!-- Home Section -->
-    <section id="feed" class="feed-section" ng-app="feed">
+    <section id="feed" class="feed-section">
 
         <!-- Search Feed -->
         <div class="container">
             <div class="row">
                 <div class="col-xs-12">
-
                     <div class="input-group"> 
                         <input id="address" type="text" placeholder="Company, username, title ..." class="form-control" ng-model="search.$"> 
                         <span class="input-group-btn"> 
                             <button class="btn btn btn-primary" type="button" id="addressSearch"> Search </button> 
                         </span> 
                     </div>
-
-                    </div>
                 </div>
             </div>
         </div>
+        
 
         <!-- Feed -->
         <div class="container feed" ng-controller="PostController">
-            <div class="row row-centered" ng-repeat="post in posts | filter:search:strict">
-                <div class="col-xs-2">
+            <div class="row row-centered post-separator" ng-repeat="post in posts | filter:search:strict">
+                <div class="col-sm-2 col-xs-3">
                     <div class="rating"><h4>{{post.rating | percentage}}<span class="text">Deserved It</span></h4></div>
                 </div>
-                <div class="col-xs-2">
-                    <div class="thumbnail"><img src="{{post.thumbnail}}"></div>
+                <div class="col-sm-3 col-xs-3">
+                    <div class="thumbnail"><img src="{{post.thumbnail}}" alt="Post Image"/></div>
                 </div>
-                <div class="col-xs-8">
+                <div class="col-sm-7 col-xs-6">
                     <div class="post-title"><h4>{{post.title}}</h4></div>
                     <div class="post-timestamp"><p>Submitted {{post.timestamp}} hours ago by <span class="user">{{post.user}}</span></p></div>
                     <div class="inline">
                         <span class="post-comments">{{post.comments}} comments</span>
                         <span class="post-regrets text-danger">{{post.regrets}}</span>
                         <span class="post-company label">{{post.company}}</span>
-                        <span><a class="post-links" data-target="#share">Share</a></span>
-                        <span><a class="post-links" data-target="#save">Save</a></span>
-                        <span><a class="post-links" data-target="#report">Report</a></span>
+                        <span><a data-toggle="modal" data-target="#share" class="post-links">Share</a></span>
+                        <span><a data-toggle="modal" data-target="#save" class="post-links">Save</a></span>
+                        <span><a data-toggle="modal" data-target="#report" class="post-links">Report</a></span>
                     </div>
-                </div>
+                </div><!-- <span class=""></span> -->
             </div>
+        </div>
+
+        <!-- SHARE Modal -->
+        <div class="modal fade" id="share" tabindex="-1" role="dialog" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Share</h4>
+              </div>
+              <div class="modal-body">
+                ...
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SAVE Modal -->
+        <div class="modal fade" id="save" tabindex="-1" role="dialog" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Save</h4>
+              </div>
+              <div class="modal-body">
+                ...
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- REPORT Modal -->
+        <div class="modal fade" id="report" tabindex="-1" role="dialog" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Report</h4>
+              </div>
+              <div class="modal-body">
+                ...
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+          </div>
         </div>
 
     </section>
 
     <!-- Footer --> 
     <div class="footer">
-        <div class="container">      
+        <div class="container-fluid">      
             <div class="row">
-                <div class="col-xs-4">
-                    <div class="footer-logo"><a href="#"><img src="img/footer-logo.png" />Axe Hut</a></div>
+                <div class="col-sm-4">
+                    <div class="footer-logo"><a href="#"><img src="img/footer-logo.png" alt="Axe Hut Logo"/>Axe Hut</a></div>
                 </div>
-                <div class="col-xs-4">
-                    <dl class="footer-nav">
-                        <dd class="nav-item"><a href="#">About The Site</a></dd>
-                        <dd class="nav-item"><a href="#">Blog</a></dd>
-                        <dd class="nav-item"><a href="#">Advertising</a></dd>
-                    </dl>
+                <div class="col-sm-4">
+                    <ul class="footer-nav">
+                        <li class="nav-item"><a href="#">About The Site</a></li>
+                        <li class="nav-item"><a href="#">Blog</a></li>
+                        <li class="nav-item"><a href="#">Advertising</a></li>
+                    </ul>
                 </div>
-                <div class="col-xs-4">
-                    <dl class="footer-nav">
-                        <dd class="nav-item"><a href="#">Terms of Use Policy</a></dd>
-                        <dd class="nav-item"><a href="#">Recruiter? Company?</a></dd>
-                    </dl>
+                <div class="col-sm-4">
+                    <ul class="footer-nav">
+                        <li class="nav-item"><a href="#">Terms of Use Policy</a></li>
+                        <li class="nav-item"><a href="#">Recruiter? Company?</a></li>
+                    </ul>
                 </div>
             </div>
         
             <div class="row row-centered">
-                <div class="col-xs-12">
+                <div class="col-sm-12">
                     <div class="footer-copyright">Copyright &copy; 2015 Axe Hut. All rights reserved.</div>
                 </div>
             </div>
         </div>
+    </div>
 
     <!-- Angular -->
     <script src="js/angular.min.js"></script>
@@ -161,6 +220,10 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})</script>
 
     <!-- Scrolling Nav JavaScript -->
     <script src="js/jquery.easing.min.js"></script>

@@ -4990,6 +4990,10 @@ td.visible-print {
   td.hidden-print {
     display: none !important; } }
 /******************************* HTML Elements *******************************/
+html, body {
+  overflow-x: hidden;
+  width: 100%; }
+
 html {
   position: relative;
   /* Sticky Footer Style */
@@ -4997,8 +5001,12 @@ html {
   /* Sticky Footer Style */ }
 
 body {
-  margin-bottom: 300px;
+  margin: 0;
+  margin-bottom: 250px;
   /* Margin bottom by footer height */ }
+
+ul {
+  list-style-type: none; }
 
 /******************************* Universal styles  *******************************/
 .row-centered {
@@ -5007,12 +5015,20 @@ body {
 /******************************* Navbar fixed top *******************************/
 .navbar-fixed-top .fa {
   color: #856298;
-  font-size: 1.1em; }
+  font-size: 1.3em; }
 
 /******************************* Header static top *******************************/
 .header-default {
   background-color: #856298;
   height: 30vh; }
+
+.header-static-top h3 {
+  position: absolute;
+  top: 115px;
+  color: #ffffff;
+  text-align: center;
+  width: 100%;
+  text-transform: capitalize; }
 
 /******************************* Feed *******************************/
 .feed-section {
@@ -5026,15 +5042,18 @@ body {
     color: #ffffff;
     font-size: 20px;
     padding: 15px 20px;
-    margin: 10px;
-    border-radius: 5px; }
+    margin: 10px 0 20px 0;
+    border-radius: 5px;
+    width: 110px; }
     .feed-section .feed .rating .text {
-      display: inline-block;
+      display: block;
+      padding-top: 10px;
       font-size: 12px; }
   .feed-section .feed .thumbnail {
-    margin: 10px !important;
-    height: 88px;
-    width: 112px; }
+    margin: 10px !important; }
+    .feed-section .feed .thumbnail img {
+      height: 84px;
+      width: 112px; }
   .feed-section .feed .post-timestamp {
     font-size: 12px; }
   .feed-section .feed .post-title, .feed-section .feed .post-timestamp, .feed-section .feed .inline {
@@ -5043,6 +5062,10 @@ body {
     margin: 0 5px; }
   .feed-section .feed .inline .label {
     background-color: #5B3256; }
+  .feed-section .feed .post-separator:after {
+    border-bottom: solid 1px #ccc;
+    display: block;
+    margin: 10px 0; }
 
 /******************************* Footer *******************************/
 .footer {
@@ -5061,6 +5084,38 @@ body {
     font-weight: bold; }
 
 /******************************* Media Queries *******************************/
+@media (max-width: 767px) {
+  .header-default {
+    margin-top: 50px;
+    height: 15vh; }
+
+  .header-static-top h3 {
+    top: 65px; }
+
+  .feed .col-xs-3 {
+    width: 50%; }
+    .feed .col-xs-3 .rating {
+      max-width: 450px;
+      float: right; }
+    .feed .col-xs-3 .thumbnail {
+      max-width: 450px;
+      float: left; }
+  .feed .col-xs-6 {
+    width: 100%; }
+    .feed .col-xs-6 h4, .feed .col-xs-6 p, .feed .col-xs-6 a, .feed .col-xs-6 .inline {
+      text-align: center; }
+    .feed .col-xs-6 .inline {
+      margin-bottom: 15px; }
+
+  .footer {
+    text-align: center;
+    height: 200px;
+    padding: 20px 0; }
+    .footer .footer-logo {
+      margin: 10px 0 20px 0; }
+    .footer li {
+      margin: 2.5px;
+      display: inline-block; } }
 @media (min-width: 767px) {
   .navbar {
     padding: 20px 0;
@@ -5070,3 +5125,7 @@ body {
 
   .top-nav-collapse {
     padding: 0; } }
+@media (max-width: 480px) {
+  .inline .post-comments, .inline .post-regrets, .inline .post-company, .inline .post-links {
+    margin: 0 2.5px !important;
+    font-size: 11px; } }

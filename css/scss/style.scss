@@ -6,14 +6,21 @@ $darkest-color: #5B3256;
 $white: #ffffff;
 
 /******************************* HTML Elements *******************************/
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
 html {
-  position: relative; /* Sticky Footer Style */
-  min-height: 100%; /* Sticky Footer Style */
+    position: relative; /* Sticky Footer Style */
+    min-height: 100%; /* Sticky Footer Style */
 }
 body {
-  margin-bottom: 300px; /* Margin bottom by footer height */
+    margin: 0;
+    margin-bottom: 250px; /* Margin bottom by footer height */
 }
-
+ul {
+    list-style-type: none;
+}
 /******************************* Universal styles  *******************************/
 .row-centered {
 	text-align: center;
@@ -22,7 +29,7 @@ body {
 .navbar-fixed-top {
 	.fa {
 		color: $base-color;
-		font-size: 1.1em;
+		font-size: 1.3em;
 	}
 }
 /******************************* Header static top *******************************/
@@ -33,6 +40,14 @@ body {
 }
 .header-static-top {
 	@extend .navbar-static-top;
+    h3 {
+        position: absolute;
+        top: 115px;
+        color: $white;
+        text-align: center;
+        width: 100%;
+        text-transform: capitalize;
+    }
 }
 
 /******************************* Feed *******************************/
@@ -51,18 +66,22 @@ body {
     		color: $white;
     		font-size: 20px;
     		padding: 15px 20px;
-    		margin: 10px;
+    		margin: 10px 0 20px 0;
     		border-radius: 5px;
+            width: 110px;
 
     		.text {
-    			display: inline-block;
+    			display: block;
+                padding-top: 10px; 
     			font-size: 12px;
     		}
     	}
-    	.thumbnail {
-            margin: 10px !important;
-            height: 88px;
-            width: 112px;
+        .thumbnail {
+             margin: 10px !important;
+            img {
+                height: 84px;
+                width: 112px;
+            }
         }
     	.post-timestamp {
     		font-size: 12px;
@@ -78,7 +97,11 @@ body {
     			background-color: $darkest-color;
     		}
         }
-    	
+    	.post-separator:after {
+            border-bottom: solid 1px #ccc;
+            display: block;
+            margin: 10px 0;
+        }
     }
 }
 /******************************* Footer *******************************/
@@ -105,6 +128,56 @@ body {
 }
 
 /******************************* Media Queries *******************************/
+@media(max-width: 767px){
+    .header-default {
+        margin-top: 50px;
+        height: 15vh;
+    }
+    .header-static-top {
+        h3 {
+            top: 65px;
+        }
+    }
+    .feed{
+        .col-xs-3 {
+            width: 50%;
+
+            .rating {
+                max-width: 450px;
+                float: right;
+            }
+            .thumbnail {
+                max-width: 450px;
+                float: left;
+            }
+        }
+        .col-xs-6 {
+            width: 100%;
+            
+            h4, p, a, .inline {
+                text-align: center;
+            }
+
+            .inline {
+                margin-bottom: 15px;
+            }
+        }
+    }
+    .footer {
+        text-align: center;
+        height: 200px;
+        padding: 20px 0;
+
+        .footer-logo {
+            margin: 10px 0 20px 0;
+        }
+        
+        li {
+            margin: 2.5px;
+            display: inline-block;
+        }
+    }
+}
 @media(min-width:767px) {
     .navbar {
         padding: 20px 0;
@@ -117,4 +190,11 @@ body {
         padding: 0;
     }
 }
-
+@media(max-width:480px){
+    .inline {
+        .post-comments, .post-regrets, .post-company, .post-links {
+            margin: 0 2.5px !important;
+            font-size: 11px;
+        }
+    }
+}
