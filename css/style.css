@@ -289,7 +289,7 @@ img {
 .img-rounded {
   border-radius: 6px; }
 
-.img-thumbnail, .thumbnail {
+.img-thumbnail, .thumbnail, .feed-section .feed .rating {
   padding: 4px;
   line-height: 1.42857;
   background-color: #fff;
@@ -3669,22 +3669,24 @@ a.list-group-item.active > .badge,
       .jumbotron h1 {
         font-size: 63px; } }
 
-.thumbnail {
+.thumbnail, .feed-section .feed .rating {
   display: block;
   margin-bottom: 20px; }
-  .thumbnail > img {
+  .thumbnail > img, .feed-section .feed .rating > img {
     display: block;
     max-width: 100%;
     height: auto;
     margin-left: auto;
     margin-right: auto; }
-  .thumbnail .caption {
+  .thumbnail .caption, .feed-section .feed .rating .caption {
     padding: 9px;
     color: #333333; }
 
-a.thumbnail:hover,
+a.thumbnail:hover, .feed-section .feed a.rating:hover,
 a.thumbnail:focus,
-a.thumbnail.active {
+.feed-section .feed a.rating:focus,
+a.thumbnail.active,
+.feed-section .feed a.active.rating {
   border-color: #428bca; }
 
 .alert {
@@ -5016,6 +5018,9 @@ ul {
 .navbar-fixed-top .fa {
   color: #856298;
   font-size: 1.3em; }
+.navbar-fixed-top .navbar-brand img {
+  width: 100%;
+  height: 25px; }
 
 /******************************* Header static top *******************************/
 .header-default {
@@ -5028,7 +5033,7 @@ ul {
   color: #ffffff;
   text-align: center;
   width: 100%;
-  text-transform: capitalize; }
+  text-transform: uppercase; }
 
 /******************************* Feed *******************************/
 .feed-section {
@@ -5041,31 +5046,41 @@ ul {
     background-color: #d394e2;
     color: #ffffff;
     font-size: 20px;
-    padding: 15px 20px;
-    margin: 10px 0 20px 0;
-    border-radius: 5px;
-    width: 110px; }
+    display: block;
+    margin: auto;
+    border: none; }
     .feed-section .feed .rating .text {
       display: block;
       padding-top: 10px;
       font-size: 12px; }
-  .feed-section .feed .thumbnail {
-    margin: 10px !important; }
-    .feed-section .feed .thumbnail img {
-      height: 84px;
-      width: 112px; }
+  .feed-section .feed .thumbnail, .feed-section .feed .rating {
+    margin: 10px !important;
+    max-width: 130px;
+    width: 130px;
+    max-height: 100px;
+    height: 100px; }
+    .feed-section .feed .thumbnail img, .feed-section .feed .rating img {
+      max-height: 100%; }
   .feed-section .feed .post-timestamp {
     font-size: 12px; }
   .feed-section .feed .post-title, .feed-section .feed .post-timestamp, .feed-section .feed .inline {
     text-align: left; }
   .feed-section .feed .inline .post-comments, .feed-section .feed .inline .post-regrets, .feed-section .feed .inline .post-company, .feed-section .feed .inline .post-links {
-    margin: 0 5px; }
+    margin: 0 3px; }
   .feed-section .feed .inline .label {
     background-color: #5B3256; }
   .feed-section .feed .post-separator:after {
     border-bottom: solid 1px #ccc;
     display: block;
-    margin: 10px 0; }
+    margin: 50px 0;
+    position: relative;
+    top: 25px; }
+
+/******************************* Story *******************************/
+.story-section {
+  height: 100%;
+  text-align: center;
+  background: #fff; }
 
 /******************************* Footer *******************************/
 .footer {
@@ -5082,8 +5097,20 @@ ul {
   .footer .footer-logo a {
     font-size: 20px;
     font-weight: bold; }
+  .footer .footer-logo img {
+    width: 50px;
+    height: 50px;
+    margin: 0 15px; }
 
 /******************************* Media Queries *******************************/
+/*@media(max-width: 991px){
+    .thumbnail {
+         max-width: 120px;
+         width: 120px;
+         height: 100px;
+         max-height: 100px;
+     }
+}*/
 @media (max-width: 767px) {
   .header-default {
     margin-top: 50px;
@@ -5096,8 +5123,8 @@ ul {
     width: 50%; }
     .feed .col-xs-3 .rating {
       max-width: 450px;
-      float: right; }
-    .feed .col-xs-3 .thumbnail {
+      float: right !important; }
+    .feed .col-xs-3 .thumbnail, .feed-section .feed .col-xs-3 .rating {
       max-width: 450px;
       float: left; }
   .feed .col-xs-6 {

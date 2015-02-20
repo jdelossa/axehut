@@ -5,7 +5,7 @@
         "comments": 10,
         "title": "You are Crazy",
         "timestamp": "10",
-        "thumbnail" : false,
+        "thumbnail" : "images/crown.jpg",
         "regrets" : false,
         "company" : "WalMart"
     },
@@ -15,7 +15,7 @@
         "comments": 20,
         "title": "You are Sexy",
         "timestamp": "10",
-        "thumbnail" : false,
+        "thumbnail" : "images/crown.jpg",
         "regrets" : true
     },
     {
@@ -24,7 +24,7 @@
         "comments": 30,
         "title": "You are Cool",
         "timestamp": "10",
-        "thumbnail" : false,
+        "thumbnail" : "images/crown.jpg",
         "regrets" : false,
         "company" : "Basement"
     },
@@ -34,7 +34,7 @@
         "comments": 40,
         "title": "You are Crazy",
         "timestamp": "10",
-        "thumbnail" : false,
+        "thumbnail" : "images/crown.jpg",
         "regrets" : true
     },
     {
@@ -43,7 +43,7 @@
         "comments": 50,
         "title": "You are Sexy",
         "timestamp": "10",
-        "thumbnail" : false,
+        "thumbnail" : "images/crown.jpg",
         "regrets" : false,
         "company" : "Lowes"
     },
@@ -53,7 +53,7 @@
         "comments": 60,
         "title": "You are Cool",
         "timestamp": "10",
-        "thumbnail" : false,
+        "thumbnail" : "images/crown.jpg",
         "regrets" : true
     },
     {
@@ -62,7 +62,7 @@
         "comments": 70,
         "title": "You are Crazy",
         "timestamp": "10",
-        "thumbnail" : false,
+        "thumbnail" : "images/crown.jpg",
         "regrets" : true,
         "company" : "Axe Hut"
     },
@@ -72,7 +72,7 @@
         "comments": 100,
         "title": "You are Sexy",
         "timestamp": "10",
-        "thumbnail" : false,
+        "thumbnail" : "images/crown.jpg",
         "regrets" : true
     },
     {
@@ -81,7 +81,7 @@
         "comments": 90,
         "title": "You are Cool",
         "timestamp": "10",
-        "thumbnail" : false,
+        "thumbnail" : "images/crown.jpg",
         "regrets" : true,
         "company" : "Quicky"
     },
@@ -91,7 +91,7 @@
         "comments": 80,
         "title": "You are Crazy",
         "timestamp": "10",
-        "thumbnail" : false,
+        "thumbnail" : "images/crown.jpg",
         "regrets" : true
     },
     {
@@ -100,7 +100,7 @@
         "comments": 1,
         "title": "You are Sexy",
         "timestamp": "10",
-        "thumbnail" : false,
+        "thumbnail" : "images/crown.jpg",
         "regrets" : true,
         "company" : "Lord and Taylor"
     },
@@ -110,7 +110,7 @@
         "comments": 0,
         "title": "You are Cool",
         "timestamp": "10",
-        "thumbnail" : false,
+        "thumbnail" : "images/crown.jpg",
         "regrets" : false
     }
     

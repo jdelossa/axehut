@@ -31,6 +31,12 @@ ul {
 		color: $base-color;
 		font-size: 1.3em;
 	}
+    .navbar-brand{
+        img {
+           width: 100%;
+           height: 25px;
+        }
+    }
 }
 /******************************* Header static top *******************************/
 .header-default {
@@ -46,7 +52,7 @@ ul {
         color: $white;
         text-align: center;
         width: 100%;
-        text-transform: capitalize;
+        text-transform: uppercase;
     }
 }
 
@@ -62,13 +68,13 @@ ul {
 
     .feed {
     	.rating {
-    		background-color: $lightest-color;
+            @extend .thumbnail;
+            background-color: $lightest-color;
     		color: $white;
     		font-size: 20px;
-    		padding: 15px 20px;
-    		margin: 10px 0 20px 0;
-    		border-radius: 5px;
-            width: 110px;
+            display: block;
+            margin: auto;
+            border: none; 
 
     		.text {
     			display: block;
@@ -77,11 +83,16 @@ ul {
     		}
     	}
         .thumbnail {
-             margin: 10px !important;
-            img {
-                height: 84px;
-                width: 112px;
-            }
+            margin: 10px !important;
+            max-width: 130px;
+            width: 130px;
+            max-height: 100px;
+            height: 100px;
+
+             img {
+                max-height: 100%;
+             }
+            
         }
     	.post-timestamp {
     		font-size: 12px;
@@ -91,7 +102,7 @@ ul {
     	}
     	.inline {
             .post-comments, .post-regrets, .post-company, .post-links {
-                margin: 0 5px;
+                margin: 0 3px;
             }
     		.label {
     			background-color: $darkest-color;
@@ -100,10 +111,20 @@ ul {
     	.post-separator:after {
             border-bottom: solid 1px #ccc;
             display: block;
-            margin: 10px 0;
+            margin: 50px 0;
+            position: relative;
+            top: 25px;
         }
     }
 }
+
+/******************************* Story *******************************/
+.story-section {
+    height: 100%;
+    text-align: center;
+    background: #fff;
+}
+
 /******************************* Footer *******************************/
 .footer {
 	padding: 40px 0;
@@ -124,10 +145,23 @@ ul {
 			font-size: 20px;
 			font-weight: bold;
 		}
+        img {
+           width: 50px;
+           height: 50px;
+           margin: 0 15px;
+        }
 	}
 }
 
 /******************************* Media Queries *******************************/
+/*@media(max-width: 991px){
+    .thumbnail {
+         max-width: 120px;
+         width: 120px;
+         height: 100px;
+         max-height: 100px;
+     }
+}*/
 @media(max-width: 767px){
     .header-default {
         margin-top: 50px;
@@ -144,7 +178,7 @@ ul {
 
             .rating {
                 max-width: 450px;
-                float: right;
+                float: right !important;
             }
             .thumbnail {
                 max-width: 450px;
@@ -176,6 +210,7 @@ ul {
             margin: 2.5px;
             display: inline-block;
         }
+              
     }
 }
 @media(min-width:767px) {

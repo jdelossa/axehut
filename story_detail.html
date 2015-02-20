@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-ng-app="feed">
+<html lang="en" ng-app="feed">
 
 <head>
 
@@ -42,7 +42,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top"><img src="#" alt="Axe Hut Logo">Axe Hut Logo</a>
+                <a class="navbar-brand page-scroll" href="index.html"><img src="images/default.png"></a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -77,108 +77,17 @@
 
     <!-- Header Static Top -->
     <div class="header-default header-static-top">
-        <h3>Did You Deserve The Axe?</h3>
+        <h3>I stole. i get it. But they stole my paycheck</h3>
     </div>
 
     <!-- Home Section -->
-    <section id="feed" class="feed-section">
-
-        <!-- Search Feed -->
+    <section id="story-detail" class="story-section">
         <div class="container">
             <div class="row">
-                <div class="col-xs-12">
-                    <div class="input-group"> 
-                        <input id="address" type="text" placeholder="Company, username, title ..." class="form-control" data-ng-model="search.$"> 
-                        <span class="input-group-btn"> 
-                            <button class="btn btn btn-primary" type="button" id="addressSearch"> Search </button> 
-                        </span> 
-                    </div>
-                </div>
+                <div class="col-sm-4"><div class="rating"></div></div>
+                <div class="col-sm-8">:D</div>
             </div>
         </div>
-        
-
-        <!-- Feed -->
-        <div class="container feed" data-ng-controller="PostController">
-            <div class="row row-centered post-separator" data-ng-repeat="post in posts | filter:search:strict">
-                <div class="col-md-3 col-sm-3 col-xs-3">
-                    <div class="rating"><h1>{{post.rating | percentage}}<span class="text">Deserved It</span></h1></div>
-                </div>
-                <div class="col-md-3 col-sm-3 col-xs-3">
-                    <div class="thumbnail"><img src="images/default.png" data-ng-src="{{post.thumbnail}}" alt="Post Image"/></div>
-                </div>
-                <div class="col-md-6 col-sm-6 col-xs-6">
-                    <div class="post-title"><h4><a href="story_detail.html">{{post.title}}</a></h4></div>
-                    <div class="post-timestamp"><p>Submitted {{post.timestamp}} hours ago by <span class="user">{{post.user}}</span></p></div>
-                    <div class="inline">
-                        <span class="post-comments">{{post.comments}} comments</span>
-                        <span class="post-regrets text-danger">{{post.regrets}}</span>
-                        <span class="post-company label">{{post.company}}</span>
-                        <span><a data-toggle="modal" data-target="#share" class="post-links">Share</a></span>
-                        <span><a data-toggle="modal" data-target="#save" class="post-links">Save</a></span>
-                        <span><a data-toggle="modal" data-target="#report" class="post-links">Report</a></span>
-                    </div>
-                </div><!-- <span class=""></span> -->
-            </div>
-        </div>
-
-        <!-- SHARE Modal -->
-        <div class="modal fade" id="share" tabindex="-1" role="dialog" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title">Share</h4>
-              </div>
-              <div class="modal-body">
-                ...
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- SAVE Modal -->
-        <div class="modal fade" id="save" tabindex="-1" role="dialog" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title">Save</h4>
-              </div>
-              <div class="modal-body">
-                ...
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- REPORT Modal -->
-        <div class="modal fade" id="report" tabindex="-1" role="dialog" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title">Report</h4>
-              </div>
-              <div class="modal-body">
-                ...
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
     </section>
 
     <!-- Footer --> 
