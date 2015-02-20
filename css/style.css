@@ -289,7 +289,7 @@ img {
 .img-rounded {
   border-radius: 6px; }
 
-.img-thumbnail, .thumbnail, .feed-section .feed .rating {
+.img-thumbnail, .thumbnail, .rating {
   padding: 4px;
   line-height: 1.42857;
   background-color: #fff;
@@ -3669,24 +3669,24 @@ a.list-group-item.active > .badge,
       .jumbotron h1 {
         font-size: 63px; } }
 
-.thumbnail, .feed-section .feed .rating {
+.thumbnail, .rating {
   display: block;
   margin-bottom: 20px; }
-  .thumbnail > img, .feed-section .feed .rating > img {
+  .thumbnail > img, .rating > img {
     display: block;
     max-width: 100%;
     height: auto;
     margin-left: auto;
     margin-right: auto; }
-  .thumbnail .caption, .feed-section .feed .rating .caption {
+  .thumbnail .caption, .rating .caption {
     padding: 9px;
     color: #333333; }
 
-a.thumbnail:hover, .feed-section .feed a.rating:hover,
+a.thumbnail:hover, a.rating:hover,
 a.thumbnail:focus,
-.feed-section .feed a.rating:focus,
+a.rating:focus,
 a.thumbnail.active,
-.feed-section .feed a.active.rating {
+a.active.rating {
   border-color: #428bca; }
 
 .alert {
@@ -5005,7 +5005,11 @@ html {
 body {
   margin: 0;
   margin-bottom: 250px;
-  /* Margin bottom by footer height */ }
+  /* Margin bottom by footer height */
+  background-image: url("../../axehut/images/geometry2.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; }
 
 ul {
   list-style-type: none; }
@@ -5029,88 +5033,84 @@ ul {
 
 .header-static-top h3 {
   position: absolute;
-  top: 115px;
+  top: 125px;
   color: #ffffff;
   text-align: center;
   width: 100%;
   text-transform: uppercase; }
 
-/******************************* Feed *******************************/
-.feed-section {
+/******************************* Section *******************************/
+.feed-section, .story-section {
   height: 100%;
   text-align: center;
   background: #fff; }
-  .feed-section .input-group {
-    margin: 50px 0; }
-  .feed-section .feed .rating {
-    background-color: #d394e2;
-    color: #ffffff;
-    font-size: 20px;
-    display: block;
-    margin: auto;
-    border: none; }
-    .feed-section .feed .rating .text {
-      display: block;
-      padding-top: 10px;
-      font-size: 12px; }
-  .feed-section .feed .thumbnail, .feed-section .feed .rating {
-    margin: 10px !important;
-    max-width: 130px;
-    width: 130px;
-    max-height: 100px;
-    height: 100px; }
-    .feed-section .feed .thumbnail img, .feed-section .feed .rating img {
-      max-height: 100%; }
-  .feed-section .feed .post-timestamp {
-    font-size: 12px; }
-  .feed-section .feed .post-title, .feed-section .feed .post-timestamp, .feed-section .feed .inline {
-    text-align: left; }
-  .feed-section .feed .inline .post-comments, .feed-section .feed .inline .post-regrets, .feed-section .feed .inline .post-company, .feed-section .feed .inline .post-links {
-    margin: 0 3px; }
-  .feed-section .feed .inline .label {
-    background-color: #5B3256; }
-  .feed-section .feed .post-separator:after {
-    border-bottom: solid 1px #ccc;
-    display: block;
-    margin: 50px 0;
-    position: relative;
-    top: 25px; }
 
-/******************************* Story *******************************/
-.story-section {
-  height: 100%;
-  text-align: center;
-  background: #fff; }
+/******************************* Universal Styles *******************************/
+.input-group {
+  margin: 50px 0; }
+
+.rating {
+  background-color: #d394e2;
+  color: #ffffff;
+  display: block;
+  margin: auto;
+  border: none; }
+  .rating .text {
+    display: block;
+    padding-top: 10px;
+    font-size: 12px; }
+
+.thumbnail, .rating {
+  margin: 10px !important;
+  max-width: 130px;
+  width: 130px;
+  max-height: 100px;
+  height: 100px; }
+  .thumbnail img, .rating img {
+    max-height: 100%; }
+
+.post-timestamp {
+  font-size: 12px; }
+
+.post-title, .post-timestamp, .inline {
+  text-align: left; }
+
+.inline .post-comments, .inline .post-regrets, .inline .post-company, .inline .post-links {
+  margin: 0 3px; }
+.inline .label {
+  background-color: #5B3256; }
+
+.post-separator:after {
+  border-bottom: solid 1px #ccc;
+  display: block;
+  margin: 50px 0;
+  position: relative;
+  top: 25px; }
 
 /******************************* Footer *******************************/
 .footer {
   padding: 40px 0;
-  background-color: #5B3256;
+  /*background-color: $darkest-color;*/
   color: #ffffff;
   /* Sticky Footer Styles */
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 190px; }
-  .footer a, .footer:hover {
-    color: #ffffff; }
-  .footer .footer-logo a {
-    font-size: 20px;
-    font-weight: bold; }
-  .footer .footer-logo img {
-    width: 50px;
-    height: 50px;
-    margin: 0 15px; }
+  height: 190px;
+  background-color: #6f5499;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#563d7c), to(#6f5499));
+  background-image: -webkit-linear-gradient(top, #563d7c 0, #6f5499 100%);
+  background-image: -o-linear-gradient(top, #563d7c 0, #6f5499 100%);
+  background-image: linear-gradient(to bottom, #563d7c 0, #6f5499 100%); }
+  .footer a {
+    color: rgba(255, 255, 255, 0.7); }
+    .footer a:hover {
+      color: #ffffff; }
+  .footer li {
+    margin: 2.5px;
+    display: inline-block; }
 
 /******************************* Media Queries *******************************/
-/*@media(max-width: 991px){
-    .thumbnail {
-         max-width: 120px;
-         width: 120px;
-         height: 100px;
-         max-height: 100px;
-     }
-}*/
 @media (max-width: 767px) {
   .header-default {
     margin-top: 50px;
@@ -5124,7 +5124,7 @@ ul {
     .feed .col-xs-3 .rating {
       max-width: 450px;
       float: right !important; }
-    .feed .col-xs-3 .thumbnail, .feed-section .feed .col-xs-3 .rating {
+    .feed .col-xs-3 .thumbnail, .feed .col-xs-3 .rating {
       max-width: 450px;
       float: left; }
   .feed .col-xs-6 {
@@ -5135,14 +5135,8 @@ ul {
       margin-bottom: 15px; }
 
   .footer {
-    text-align: center;
     height: 200px;
-    padding: 20px 0; }
-    .footer .footer-logo {
-      margin: 10px 0 20px 0; }
-    .footer li {
-      margin: 2.5px;
-      display: inline-block; } }
+    padding: 20px 0; } }
 @media (min-width: 767px) {
   .navbar {
     padding: 20px 0;
