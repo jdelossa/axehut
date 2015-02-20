@@ -5039,7 +5039,9 @@ body {
     font-size: 12px; }
   .feed-section .feed .post-title, .feed-section .feed .post-timestamp, .feed-section .feed .inline {
     text-align: left; }
-  .feed-section .feed .label {
+  .feed-section .feed .inline .post-comments, .feed-section .feed .inline .post-regrets, .feed-section .feed .inline .post-company, .feed-section .feed .inline .post-links {
+    margin: 0 5px; }
+  .feed-section .feed .inline .label {
     background-color: #5B3256; }
 
 /******************************* Footer *******************************/

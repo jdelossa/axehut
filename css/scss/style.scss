@@ -64,17 +64,20 @@ body {
             height: 88px;
             width: 112px;
         }
-
     	.post-timestamp {
     		font-size: 12px;
     	}
     	.post-title, .post-timestamp, .inline {
     		text-align: left;
     	}
-    	
+    	.inline {
+            .post-comments, .post-regrets, .post-company, .post-links {
+                margin: 0 5px;
+            }
     		.label {
     			background-color: $darkest-color;
     		}
+        }
     	
     }
 }
