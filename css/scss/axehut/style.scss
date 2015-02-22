@@ -103,8 +103,9 @@ ul {
         text-transform: capitalize;
     }
     .post-content, .post-regrets-content, .comment {
-        text-align: left;
+        text-align: justify;
         padding: 10px 0;
+        font-size: 18px;
     }
 }
 /* Feed Section Styles */
@@ -131,7 +132,7 @@ ul {
         top: 0
     }
     .single {
-        font-size: 14px;
+        font-size: 18px;
     }
     .post-company, .post-recruiter {
         padding: 0.4em 1.6em 0.4em;
@@ -408,7 +409,14 @@ ul {
                 margin: 10px auto;
             }
         }
-        
+    }
+    .form-section {
+        .form-horizontal {
+            margin: 0 15px;
+        }
+        .control-label {
+            padding-bottom: 7px;
+        }
     }
     .footer {
         height: 200px;
