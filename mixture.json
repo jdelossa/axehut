@@ -9,12 +9,12 @@
   "lintScripts": false,
   "modelSource": null,
   "preprocessorLocations": [
-    "css/scss"
+    "css/scss/axehut"
   ],
-  "preprocessorScriptOutput": "css/scss",
+  "preprocessorScriptOutput": "css",
   "preprocessorStyleOutput": "css",
   "projectDescription": "My project description",
-  "projectName": "site",
+  "projectName": "axehut",
   "publishedId": null,
   "serverHostname": null,
   "serverPort": null,

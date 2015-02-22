@@ -1,8 +1,10 @@
-@import "bootstrap.scss";
+@import "bootstrap/bootstrap.scss";
+
 
 /* Grays */
 $mine-shaft: #333333;
 $gray: #8b8b8b;
+$silver: #cccccc;
 /* Purples */
 $trendy-pink: #856298; /*Base Color*/
 $lavender: #d394e2; /*Hightlight Color*/
@@ -24,16 +26,15 @@ html {
 body {
     margin: 0;
     margin-bottom: 220px; /* Margin bottom by footer height */
+    background-color: $white;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    padding-top: 90px;
 }
 ul {
     list-style-type: none;
-}
-/******************************* Universal styles  *******************************/
-.row-centered {
-	text-align: center;
+    padding-left: 0;
 }
 /******************************* Navbar fixed top *******************************/
 .navbar-fixed-top {
@@ -52,13 +53,13 @@ ul {
 .header-default {
 	@extend .navbar-default;
 	background-color: $trendy-pink;
-	height: 30vh;
+	height: 100px;
 }
 .header-static-top {
 	@extend .navbar-static-top;
     h2 {
         position: absolute;
-        top: 110px;
+        padding: 15px;
         color: $white;
         text-align: center;
         width: 100%;
@@ -67,37 +68,22 @@ ul {
     }
 }
 /******************************* Universal Styles *******************************/
-/*sSeparator*/
-    .separator:after {
-        border-bottom: solid 1px #ccc;
-        display: block;
-        margin: 50px 0;
-        position: relative;
-        top: 25px;
-    }
+.row-centered {
+    text-align: center;
+}
+.separator:after {
+    border-bottom: solid 1px $silver;
+    display: block;
+    margin: 50px 0;
+    position: relative;
+    top: 25px;
+}
 /******************************* Section *******************************/
 .feed-section, .story-section {
     height: 100%;
     text-align: center;
-    background: #fff;
     overflow-y: hidden; 
-}
-.feed-section {
-    /*Search*/
-    .input-group {
-        margin: 50px 0 0 0;
 
-        .form-control {
-            height: 45px;
-            font-size: 22px;
-            width: 95%;
-        }
-        .btn {
-            padding: 9px 20px;
-            font-size: 18px;
-            border-radius: 6px !important;
-        }
-    }
     /*Post Rating*/
     .rating {
         @extend .thumbnail;
@@ -119,6 +105,23 @@ ul {
     .not-deserved {
         @extend .rating;
         background-color: $lavender;
+    }
+}
+.feed-section {
+    /*Search*/
+    .input-group {
+        margin: 50px 0 0 0;
+
+        .form-control {
+            height: 45px;
+            font-size: 22px;
+            width: 95%;
+        }
+        .btn {
+            padding: 9px 20px;
+            font-size: 18px;
+            border-radius: 6px !important;
+        }
     }
     /*Post Thumbnail*/
     .thumbnail {
@@ -149,8 +152,14 @@ ul {
     .inline {
         .post-comments, .post-regrets, .post-company, .post-links {
             margin: 0 3px;
-            color: $gray;
             font-size: 14px;
+        }
+        .post-company, .post-company, .post-links {
+            color: $gray;
+        }
+        .post-links {
+            display: inline-block;
+            padding: 10px 0 0 0;
         }
         .label {
             background-color: $finn;
@@ -178,11 +187,10 @@ ul {
 	}
 
     li {
-        margin: 2.5px;
+        margin-right: 2.5px;
         display: inline-block;
     }
 }
-
 /******************************* Media Queries *******************************/
 @media (min-width: 1200px){
     .container {
@@ -195,24 +203,29 @@ ul {
     }
 }
 @media(max-width: 767px){
+    body {
+        padding-top: 50px;
+    }
     .header-default {
-        margin-top: 50px;
-        height: 15vh;
+        height: 80px;
     }
     .header-static-top h2{
-        top: 65px;
+        font-size: 26px;
+        padding: 10px;
     }
     .feed-section{
         .col-xs-3 {
             width: 50%;
+            padding-left: 5px;
+            padding-right: 5px;
 
             .rating {
                 float: right !important;
             }
             .thumbnail {
                 float: left;
-                max-width: 200px;
-                width: 200px;
+                max-width: 185px;
+                width: 185px;
             }
         }
         .col-xs-6 {
@@ -225,16 +238,13 @@ ul {
                 margin-bottom: 15px;
             }
         }
-        .post-links {
-            display: inline-block;
-        }
     }
     .footer {
         height: 200px;
         padding: 20px 0; 
     }
 }
-@media(min-width:767px) {
+@media(min-width: 767px) {
     .navbar {
         padding: 20px 0;
         -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
@@ -244,37 +254,65 @@ ul {
     .top-nav-collapse {
         padding: 0;
     }
-}
-@media(max-width:480px){
-    .header-default {
-        height: 13vh;
+    .body-padding-top {
+        padding-top: 120px;
     }
-    .header-static-top h2 {
-        font-size: 25px;
-        top: 60px;
+}
+@media(max-width: 480px){
+    .header-default {
+        height: 75px;
+    }
+    .header-static-top h2{
+        font-size: 20px;
+        padding: 7px;
     }
     .feed-section {
         /*Search*/
         .input-group {
             margin: 30px 0 0 0;
 
-            .form-control {
+            .form-control, .btn {
                 font-size: 16px;
             }
         }
-        .col-xs-3{
+        .col-xs-3 {
             .thumbnail {
                 max-width: 150px;
                 width: 150px;
             }
         }
-        .post-title {
+        .post-title a {
+            font-size: 14px;
             margin: 0 2.5px;
         }
         .inline {
-            .post-comments, .post-regrets, .post-company, .post-links {
+            .post-comments, .post-regrets, .post-company {
                 margin: 0 2.5px !important;
-                font-size: 11px;
+                font-size: 12px;
+            }
+        }
+    }
+    .footer li, .footer a, .footer p {
+        font-size: 12px;
+    }
+}
+@media(max-width: 400px) {
+    .feed-section {
+        /*Search*/
+        .input-group {
+            margin: 20px 0 0 0;
+
+            .form-control, .btn {
+                font-size: 13px;
+            }
+            .btn {
+                padding: 12px 20px;
+            }
+        }
+        .col-xs-3 {
+            .thumbnail {
+                max-width: 125px;
+                width: 125px;
             }
         }
     }

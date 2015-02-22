@@ -9,7 +9,7 @@
   "lintScripts": false,
   "modelSource": null,
   "preprocessorLocations": [
-    "/"
+    "scss"
   ],
   "preprocessorScriptOutput": "/",
   "preprocessorStyleOutput": "/",

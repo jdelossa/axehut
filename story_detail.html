@@ -11,15 +11,11 @@
 
     <title>AxeHut</title>
 
-    <!-- Bootstrap Core CSS -->
-<!--     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/bootstrap-responsive.min.css" rel="stylesheet"> -->
-
     <!-- Custom CSS -->
-    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -42,7 +38,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="index.html"><img src="#" alt="Axe Hut Logo">Axe Hut Logo</a>
+                <a class="navbar-brand page-scroll" href="index.html">Axe Hut Logo</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -75,17 +71,16 @@
         <!-- /.container -->
     </nav>
 
-    <!-- Header Static Top -->
     <div class="header-default header-static-top">
-        <h3>I stole. i get it. But they stole my paycheck</h3>
+        <h2>I stole. i get it. But they stole my paycheck</h2>
     </div>
 
-    <!-- Home Section -->
+    <!-- Story Detail Section -->
     <section id="story-detail" class="story-section">
         <div class="container single-post" data-ng-controller="PostController">
-            <div class="row" data-ng-repeat="post in posts">
+            <div class="row" data-ng-repeat="post in posts | filter: {id: 6}">
                 <div class="col-sm-4">
-                    <div class="rating"><h1>{{post.rating | percentage}}</h1></div>
+                     <div class="rating" data-ng-class="{true: 'deserved', false: 'not-deserved'}[post.rating > 50]"><h1>{{post.rating | percentage}}<span class="text">Deserved It</span></h1></div>
                 </div>
                 <div class="col-sm-8">:D</div>
             </div>
@@ -96,7 +91,7 @@
     <div class="footer">
         <div class="container">      
             <div class="row row-centered">
-                <div class="col-sm-12">
+                <div class="col-xs-12">
                     <ul class="footer-nav">
                         <li class="nav-item"><a href="#">About</a></li>
                         <li class="nav-item"><a href="#">Careers</a></li>
@@ -108,8 +103,8 @@
             </div>
         
             <div class="row row-centered">
-                <div class="col-sm-12">
-                    <div class="footer-copyright">All rights reserved. &copy;2015 Axe Hut, LLC </div>
+                <div class="col-xs-12">
+                    <div class="footer-copyright"><p>All rights reserved. &copy;2015 Axe Hut, LLC</p></div>
                 </div>
             </div>
         </div>
@@ -132,8 +127,5 @@
     <script src="js/jquery.easing.min.js"></script>
     <script src="js/scrolling-nav.js"></script>
 
-    
-
 </body>
-
 </html>
