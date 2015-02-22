@@ -16,6 +16,8 @@ app.controller("PostController", function($scope, $http) {
   searchAll.sendKeys('i');
 });
 
+var rating;
+
 angular.module('percentage', [])
     .filter('percentage', ['$window', function ($window) {
         return function (input, decimals, suffix) {

@@ -1,117 +1,85 @@
 [
     {
-        "user": 1,
-        "rating": 38,
-        "comments": 10,
-        "title": "You are Crazy",
-        "timestamp": "10",
-        "thumbnail" : "images/crown.jpg",
-        "regrets" : false,
-        "company" : "WalMart"
+        "user": "firedguy7708",
+        "rating": 57,
+        "comments": 236,
+        "title": "My Boss Had Anger Issues And I Was Sick Of It",
+        "timestamp": "10 hours",
+        "thumbnail" : "images/crown.jpg"
     },
     {
-        "user": 2,
-        "rating": 39,
-        "comments": 20,
-        "title": "You are Sexy",
-        "timestamp": "10",
+        "user": "Annonymous",
+        "rating": 36,
+        "comments": 6,
+        "title": "People Thought I Was Weird, So I Lost My Job",
+        "timestamp": "23 minutes",
         "thumbnail" : "images/crown.jpg",
-        "regrets" : true
+        "regrets" : "regrets",
+        "company" : "Google"
     },
     {
-        "user": 3,
-        "rating": 40,
-        "comments": 30,
-        "title": "You are Cool",
-        "timestamp": "10",
+        "user": "maybachmusician28",
+        "rating": 7,
+        "comments": 17,
+        "title": "This Is Some Bonafide Bullshit",
+        "timestamp": "1 hour",
         "thumbnail" : "images/crown.jpg",
-        "regrets" : false,
-        "company" : "Basement"
+        "regrets" : "regrets"
     },
     {
-        "user": 4,
-        "rating": 41,
-        "comments": 40,
-        "title": "You are Crazy",
-        "timestamp": "10",
+        "user": "Annonymous",
+        "rating": 0,
+        "comments": 1486,
+        "title": "Fuck BoA. They Don't Value Shit. Stay AWAY!!",
+        "timestamp": "51 minutes",
         "thumbnail" : "images/crown.jpg",
-        "regrets" : true
+        "company" : "Bank of America"
     },
     {
-        "user": 5,
-        "rating": 42,
-        "comments": 50,
-        "title": "You are Sexy",
-        "timestamp": "10",
-        "thumbnail" : "images/crown.jpg",
-        "regrets" : false,
-        "company" : "Lowes"
-    },
-    {
-        "user": 6,
-        "rating": 43,
-        "comments": 60,
-        "title": "You are Cool",
-        "timestamp": "10",
-        "thumbnail" : "images/crown.jpg",
-        "regrets" : true
-    },
-    {
-        "user": 7,
-        "rating": 44,
-        "comments": 70,
-        "title": "You are Crazy",
-        "timestamp": "10",
-        "thumbnail" : "images/crown.jpg",
-        "regrets" : true,
-        "company" : "Axe Hut"
-    },
-    {
-        "user": 8,
-        "rating": 45,
-        "comments": 100,
-        "title": "You are Sexy",
-        "timestamp": "10",
-        "thumbnail" : "images/crown.jpg",
-        "regrets" : true
-    },
-    {
-        "user": 9,
-        "rating": 46,
-        "comments": 90,
-        "title": "You are Cool",
-        "timestamp": "10",
-        "thumbnail" : "images/crown.jpg",
-        "regrets" : true,
-        "company" : "Quicky"
-    },
-    {
-        "user": 10,
-        "rating": 47,
-        "comments": 80,
-        "title": "You are Crazy",
-        "timestamp": "10",
-        "thumbnail" : "images/crown.jpg",
-        "regrets" : true
-    },
-    {
-        "user": 11,
-        "rating": 48,
-        "comments": 1,
-        "title": "You are Sexy",
-        "timestamp": "10",
-        "thumbnail" : "images/crown.jpg",
-        "regrets" : true,
-        "company" : "Lord and Taylor"
-    },
-    {
-        "user": 12,
-        "rating": 49,
+        "user": "chubchubb",
+        "rating": 100,
         "comments": 0,
-        "title": "You are Cool",
-        "timestamp": "10",
+        "title": "MY BOSS DIDN'T HAVE THE ANSWERS!!!!",
+        "timestamp": "1 minute",
         "thumbnail" : "images/crown.jpg",
-        "regrets" : false
+        "regrets" : "regrets",
+        "company" : "McDonalds"
+    },
+    {
+        "user": "Annonymous",
+        "rating": 43,
+        "comments": 9,
+        "title": "My Swag Was Too Much For My Manager",
+        "timestamp": "22 minutes",
+        "thumbnail" : "images/crown.jpg"
+    },
+    {
+        "user": "teddydaniels",
+        "rating": 66,
+        "comments": 18,
+        "title": "I Stole. I Get It. But they stole my paycheck",
+        "timestamp": "3 hours",
+        "thumbnail" : "images/crown.jpg",
+        "regrets" : "regrets",
+        "company" : "Macys"
+    },
+    {
+        "user": "milehater40OH",
+        "rating": 98,
+        "comments": 29,
+        "title": "You seriously fired me for taking off on xmas",
+        "timestamp": "17 hours",
+        "thumbnail" : "images/crown.jpg"
+    }, 
+    {
+        "user": "hovit096",
+        "rating": 83,
+        "comments": 27,
+        "title": "If You Succeed, Prepare to be crucified ... ",
+        "timestamp": "2 hours",
+        "thumbnail" : "images/crown.jpg",
+        "regrets" : "regrets",
+        "company" : " Bloomingdales"
     }
     
 ]

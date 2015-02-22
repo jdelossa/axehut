@@ -1,9 +1,16 @@
 @import "bootstrap.scss";
 
-$base-color: #856298;
-$lightest-color: #d394e2;
-$darkest-color: #5B3256;
+/* Grays */
+$mine-shaft: #333333;
+$gray: #8b8b8b;
+/* Purples */
+$trendy-pink: #856298; /*Base Color*/
+$lavender: #d394e2; /*Hightlight Color*/
+$bossanova: #44214d; /*Hightlight Color 2*/
+$finn: #5B3256; /*Footer*/
+/* Basics */
 $white: #ffffff;
+$off-white: #cdcdcd;
 
 /******************************* HTML Elements *******************************/
 html, body {
@@ -16,8 +23,7 @@ html {
 }
 body {
     margin: 0;
-    margin-bottom: 250px; /* Margin bottom by footer height */
-    background-image: url('../../axehut/images/geometry2.png'); 
+    margin-bottom: 220px; /* Margin bottom by footer height */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -32,7 +38,7 @@ ul {
 /******************************* Navbar fixed top *******************************/
 .navbar-fixed-top {
 	.fa {
-		color: $base-color;
+		color: $trendy-pink;
 		font-size: 1.3em;
 	}
     .navbar-brand{
@@ -45,99 +51,127 @@ ul {
 /******************************* Header static top *******************************/
 .header-default {
 	@extend .navbar-default;
-	background-color: $base-color;
+	background-color: $trendy-pink;
 	height: 30vh;
 }
 .header-static-top {
 	@extend .navbar-static-top;
-    h3 {
+    h2 {
         position: absolute;
-        top: 125px;
+        top: 110px;
         color: $white;
         text-align: center;
         width: 100%;
         text-transform: uppercase;
+        font-weight: 200;
     }
 }
-
+/******************************* Universal Styles *******************************/
+/*sSeparator*/
+    .separator:after {
+        border-bottom: solid 1px #ccc;
+        display: block;
+        margin: 50px 0;
+        position: relative;
+        top: 25px;
+    }
 /******************************* Section *******************************/
 .feed-section, .story-section {
     height: 100%;
     text-align: center;
     background: #fff;
+    overflow-y: hidden; 
 }
+.feed-section {
+    /*Search*/
+    .input-group {
+        margin: 50px 0 0 0;
 
-/******************************* Universal Styles *******************************/
-.input-group {
-	margin: 50px 0;
-}
-.rating {
-    @extend .thumbnail;
-    background-color: $lightest-color;
-	color: $white;
-    display: block;
-    margin: auto;
-    border: none; 
-
-	.text {
-		display: block;
-        padding-top: 10px; 
-		font-size: 12px;
-	}
-}
-.thumbnail {
-    margin: 10px !important;
-    max-width: 130px;
-    width: 130px;
-    max-height: 100px;
-    height: 100px;
-
-     img {
-        max-height: 100%;
-     }
-    
-}
-.post-timestamp {
-	font-size: 12px;
-}
-.post-title, .post-timestamp, .inline {
-	text-align: left;
-}
-.inline {
-    .post-comments, .post-regrets, .post-company, .post-links {
-        margin: 0 3px;
+        .form-control {
+            height: 45px;
+            font-size: 22px;
+            width: 95%;
+        }
+        .btn {
+            padding: 9px 20px;
+            font-size: 18px;
+            border-radius: 6px !important;
+        }
     }
-	.label {
-		background-color: $darkest-color;
-	}
-}
-.post-separator:after {
-    border-bottom: solid 1px #ccc;
-    display: block;
-    margin: 50px 0;
-    position: relative;
-    top: 25px;
-}
+    /*Post Rating*/
+    .rating {
+        @extend .thumbnail;
+        color: $white;
+        display: block;
+        margin: auto;
+        border: none; 
 
+        .text {
+            display: block;
+            padding-top: 10px; 
+            font-size: 12px;
+        }
+    }
+    .deserved {
+        @extend .rating;
+        background-color: $bossanova;
+    }
+    .not-deserved {
+        @extend .rating;
+        background-color: $lavender;
+    }
+    /*Post Thumbnail*/
+    .thumbnail {
+        max-height: 100px;
+        height: 100px;
+
+         img {
+            max-height: 100%;
+            width: 100%;
+         }
+        
+    }
+    /*Post Content*/
+    .user {
+        color: $trendy-pink;
+    }
+    .post-title, .post-timestamp, .inline {
+        text-align: left;
+    }
+    .post-title a {
+        color: $mine-shaft !important;
+        text-transform: capitalize;
+    }
+    .post-timestamp {
+        font-size: 10px;
+        color: $gray;
+    }
+    .inline {
+        .post-comments, .post-regrets, .post-company, .post-links {
+            margin: 0 3px;
+            color: $gray;
+            font-size: 14px;
+        }
+        .label {
+            background-color: $finn;
+            color: $white;
+            font-weight: 400;
+        }
+    }
+}
 /******************************* Footer *******************************/
 .footer {
 	padding: 40px 0;
-	/*background-color: $darkest-color;*/
-	color: $white;
+	background-color: $finn;
+	color: $off-white;
 	/* Sticky Footer Styles */
 	position: absolute;
   	bottom: 0;
   	width: 100%;
   	height: 190px;
 
-    background-color: #6f5499;
-    background-image: -webkit-gradient(linear,left top,left bottom,from(#563d7c),to(#6f5499));
-    background-image: -webkit-linear-gradient(top,#563d7c 0,#6f5499 100%);
-    background-image: -o-linear-gradient(top,#563d7c 0,#6f5499 100%);
-    background-image: linear-gradient(to bottom,#563d7c 0,#6f5499 100%);
-
 	a {
-		color: rgba($white, .7);
+		color: $off-white;
         &:hover {
             color: $white;
         }
@@ -150,32 +184,39 @@ ul {
 }
 
 /******************************* Media Queries *******************************/
+@media (min-width: 1200px){
+    .container {
+        width: 750px !important;
+    }
+}
+@media (min-width: 992px){
+    .container {
+        width: 750px !important;
+    }
+}
 @media(max-width: 767px){
     .header-default {
         margin-top: 50px;
         height: 15vh;
     }
-    .header-static-top {
-        h3 {
-            top: 65px;
-        }
+    .header-static-top h2{
+        top: 65px;
     }
-    .feed{
+    .feed-section{
         .col-xs-3 {
             width: 50%;
 
             .rating {
-                max-width: 450px;
                 float: right !important;
             }
             .thumbnail {
-                max-width: 450px;
                 float: left;
+                max-width: 200px;
+                width: 200px;
             }
         }
         .col-xs-6 {
             width: 100%;
-            
             h4, p, a, .inline {
                 text-align: center;
             }
@@ -183,6 +224,9 @@ ul {
             .inline {
                 margin-bottom: 15px;
             }
+        }
+        .post-links {
+            display: inline-block;
         }
     }
     .footer {
@@ -197,16 +241,41 @@ ul {
         -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
         transition: background .5s ease-in-out,padding .5s ease-in-out;
     }
-
     .top-nav-collapse {
         padding: 0;
     }
 }
 @media(max-width:480px){
-    .inline {
-        .post-comments, .post-regrets, .post-company, .post-links {
-            margin: 0 2.5px !important;
-            font-size: 11px;
+    .header-default {
+        height: 13vh;
+    }
+    .header-static-top h2 {
+        font-size: 25px;
+        top: 60px;
+    }
+    .feed-section {
+        /*Search*/
+        .input-group {
+            margin: 30px 0 0 0;
+
+            .form-control {
+                font-size: 16px;
+            }
+        }
+        .col-xs-3{
+            .thumbnail {
+                max-width: 150px;
+                width: 150px;
+            }
+        }
+        .post-title {
+            margin: 0 2.5px;
+        }
+        .inline {
+            .post-comments, .post-regrets, .post-company, .post-links {
+                margin: 0 2.5px !important;
+                font-size: 11px;
+            }
         }
     }
 }
