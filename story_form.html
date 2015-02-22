@@ -72,93 +72,72 @@
     </nav>
 
     <div class="header-default header-static-top">
-        <h3>I stole. i get it. But they stole my paycheck</h3>
+        <h2 class="form-header">You were given the axe.<br>Share your story.</h2>
     </div>
 
-    <!-- Story Detail Section -->
-    <section id="post-detail" class="single-post-section">
-        <div class="container" data-ng-controller="PostController">
-            <div class="row" data-ng-repeat="post in posts | filter: {id: 6}">
-
-                <!-- Aside -->
-                <div class="col-sm-3">
-                     <div class="single-story-rating" data-ng-class="{true: 'deserved', false: 'not-deserved'}[post.rating > 50]">
-                        <h1>{{post.rating}}<span class="text">voters say the axe was deserved</span></h1>
+    <!-- Share your story -->
+    <section class="form-section">
+        <div class="container">
+            <div class="row">
+               
+                <form class="form-horizontal">
+                    <!-- title -->
+                    <div class="form-group">
+                        <label for="title" class="col-sm-2 control-label">Title*</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="title" placeholder="Story Title">
+                        </div>
                     </div>
-
-                    <h5>Did this person deserve the axe?</h5>
-                    <div class="deserved-btn"><a href="#"><i class="fa fa-check"></i>Yes</a></div>
-                    <div class="not-deserved-btn"><a href="#"><i class="fa fa-ban"></i>No</a></div>                   
-                        <h5>Company: </h5>
-                        <span class="post-company label single">{{post.company}}</span>
-                  
-                        <h5>Recruiter Involved: </h5>
-                        <span class="post-recruiter label single">Not Specified</span>
-                    
-                </div>
-
-                <!-- Main Content -->
-                <div class="col-sm-9">
-                    <!-- timestamp -->
-                    <div class="post-timestamp single"><p>Submitted {{post.timestamp}} ago by <span class="user"><a href="">{{post.user}}</a></span></p></div>
-                    <!-- story content -->
-                    <div class="post-content"><p>{{post.content}}</p></div>
-                    <!-- separator -->
-                    <div class="row row-centered separator"></div>
+                    <!-- company -->
+                    <div class="form-group">
+                        <label for="company" class="col-sm-2 control-label">Company</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="company" placeholder="Company Name">
+                        </div>
+                    </div>
+                    <!-- body -->
+                    <div class="form-group">
+                        <label for="body" class="col-sm-2 control-label">Body*</label>
+                        <div class="col-sm-10">
+                            <textarea class="form-control" id="body" placeholder="Your Story" rows="3"></textarea>
+                        </div>
+                    </div>
                     <!-- regrets -->
-                    <div class="post-regrets"><h4>{{post.regrets}}</h4></div>
-                    <div class="post-regrets-content">{{post.content}}</div>
-                    <!-- post image -->
-                    <div class="post-image"><img src="images/default.png" data-ng-src="{{post.thumbnail}}" alt="Post Image"/></div>
-                    <!-- separator -->
-                    <div class="row row-centered separator"></div>
-
-                    <section class="comments-section">
-                        <div class="row">
-                            <!-- user -->
-                            <div class="col-xs-2">
-                                <div class="user-thumbnail"><img src="images/user.png"></div>
-                            </div>
-                            <!-- add comment -->
-                            <div class="col-xs-10">
-                                <div class="comments">
-                                    <textarea class="form-control" rows="3" placeholder="Leave a comment ..."></textarea>
-                                    <button class="btn btn-primary" type="button"> Comment </button> 
-                                </div>
-                            </div>
+                    <div class="form-group">
+                        <label for="regrets" class="col-sm-2 control-label">Regrets</label>
+                        <div class="col-sm-10">
+                            <textarea class="form-control" id="regrets" placeholder="Your Regrets" rows="2"></textarea>
                         </div>
-
-                        <div class="row">
-                            <!-- post comments user -->
-                            <div class="col-xs-2">
-                                <div class="user-thumbnail"><img src="images/user.png"></div>
-                            </div>
-                            <div class="col-xs-10">
-                                <!-- timestamp -->
-                                <div class="comment-timestamp">
-                                    <p>
-                                        <span class="user"><a href="#">{{post.user}}</a></span><i class="fa fa-circle"></i>
-                                        <span class="deserved-it">Deserved it</span>
-                                        <i class="fa fa-circle"></i>posted {{post.timestamp}} ago
-                                    </p>
-                                </div>
-                                <!-- comment -->
-                                <div class="comment"><p>{{post.content}}</p></div>
-                                <div class="comment-links">
-                                    <span class="upvote">Upvote</span><i class="fa fa-circle"></i>
-                                    <span class="downvote">Downvote</span><i class="fa fa-circle"></i>
-                                    <span class="reply"><a href="#">Reply</a></span><i class="fa fa-circle"></i>
-                                    <span class="flag"><a href="#">Flag</a></span>
-                                </div>
-                            </div>
-
+                    </div>
+                    <!-- did you land that job .. -->
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                          <div class="checkbox">
+                            <label>
+                              Did you land that job through a recruiter? <input type="checkbox">
+                            </label>
+                          </div>
                         </div>
-                    </section>
-
-                </div>
+                    </div>
+                    <!-- recruiter -->
+                    <div class="form-group">
+                        <label for="recruiter" class="col-sm-2 control-label">Recruiter or Recruitment Agency</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="recruiter" placeholder="Recruiter/Agency">
+                        </div>
+                    </div>
+                    <!-- submit -->
+                    <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                      <button type="submit" class="btn btn-primary pull-right">Submit</button>
+                    </div>
+                    </div>
+                </form>
+                
             </div>
         </div>
     </section>
+
 
     <!-- Footer --> 
     <div class="footer">

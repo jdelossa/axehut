@@ -289,7 +289,7 @@ img {
 .img-rounded {
   border-radius: 6px; }
 
-.img-thumbnail, .thumbnail, .feed-section .rating, .feed-section .deserved, .feed-section .not-deserved, .story-section .rating, .story-section .deserved, .story-section .not-deserved {
+.img-thumbnail, .thumbnail, .post-thumbnail, .post-rating, .user-thumbnail, .post-image, .single-story-rating, .deserved-btn, .not-deserved-btn {
   padding: 4px;
   line-height: 1.42857;
   background-color: #fff;
@@ -3669,34 +3669,36 @@ a.list-group-item.active > .badge,
       .jumbotron h1 {
         font-size: 63px; } }
 
-.thumbnail, .feed-section .rating, .feed-section .deserved, .feed-section .not-deserved, .story-section .rating, .story-section .deserved, .story-section .not-deserved {
+.thumbnail, .post-thumbnail, .post-rating, .user-thumbnail, .post-image, .single-story-rating, .deserved-btn, .not-deserved-btn {
   display: block;
   margin-bottom: 20px; }
-  .thumbnail > img, .feed-section .rating > img, .feed-section .deserved > img, .feed-section .not-deserved > img, .story-section .rating > img, .story-section .deserved > img, .story-section .not-deserved > img {
+  .thumbnail > img, .post-thumbnail > img, .post-rating > img, .user-thumbnail > img, .post-image > img, .single-story-rating > img, .deserved-btn > img, .not-deserved-btn > img {
     display: block;
     max-width: 100%;
     height: auto;
     margin-left: auto;
     margin-right: auto; }
-  .thumbnail .caption, .feed-section .rating .caption, .feed-section .deserved .caption, .feed-section .not-deserved .caption, .story-section .rating .caption, .story-section .deserved .caption, .story-section .not-deserved .caption {
+  .thumbnail .caption, .post-thumbnail .caption, .post-rating .caption, .user-thumbnail .caption, .post-image .caption, .single-story-rating .caption, .deserved-btn .caption, .not-deserved-btn .caption {
     padding: 9px;
     color: #333333; }
 
-a.thumbnail:hover, .feed-section a.rating:hover, .feed-section a.deserved:hover, .feed-section a.not-deserved:hover, .story-section a.rating:hover, .story-section a.deserved:hover, .story-section a.not-deserved:hover,
+a.thumbnail:hover, a.post-thumbnail:hover, a.post-rating:hover, a.user-thumbnail:hover, a.post-image:hover, a.single-story-rating:hover, a.deserved-btn:hover, a.not-deserved-btn:hover,
 a.thumbnail:focus,
-.feed-section a.rating:focus,
-.feed-section a.deserved:focus,
-.feed-section a.not-deserved:focus,
-.story-section a.rating:focus,
-.story-section a.deserved:focus,
-.story-section a.not-deserved:focus,
+a.post-thumbnail:focus,
+a.post-rating:focus,
+a.user-thumbnail:focus,
+a.post-image:focus,
+a.single-story-rating:focus,
+a.deserved-btn:focus,
+a.not-deserved-btn:focus,
 a.thumbnail.active,
-.feed-section a.active.rating,
-.feed-section a.active.deserved,
-.feed-section a.active.not-deserved,
-.story-section a.active.rating,
-.story-section a.active.deserved,
-.story-section a.active.not-deserved {
+a.active.post-thumbnail,
+a.active.post-rating,
+a.active.user-thumbnail,
+a.active.post-image,
+a.active.single-story-rating,
+a.active.deserved-btn,
+a.active.not-deserved-btn {
   border-color: #428bca; }
 
 .alert {
@@ -5007,6 +5009,7 @@ td.visible-print {
 /*Hightlight Color*/
 /*Hightlight Color 2*/
 /*Footer*/
+/* Blues */
 /* Basics */
 /******************************* HTML Elements *******************************/
 html, body {
@@ -5044,9 +5047,10 @@ ul {
 /******************************* Header static top *******************************/
 .header-default {
   background-color: #856298;
-  height: 100px; }
+  height: 100px;
+  margin-bottom: 50px; }
 
-.header-static-top h2 {
+.header-static-top h2, .header-static-top h3 {
   position: absolute;
   padding: 15px;
   color: #ffffff;
@@ -5055,10 +5059,15 @@ ul {
   text-transform: uppercase;
   font-weight: 200; }
 
-/******************************* Universal Styles *******************************/
+.form-header {
+  text-transform: capitalize !important;
+  padding: 0 !important; }
+
+/******************************* Centered Rows  *******************************/
 .row-centered {
   text-align: center; }
 
+/******************************* Border Bottom  *******************************/
 .separator:after {
   border-bottom: solid 1px #cccccc;
   display: block;
@@ -5066,68 +5075,170 @@ ul {
   position: relative;
   top: 25px; }
 
-/******************************* Section *******************************/
-.feed-section, .story-section {
+.tooltip-arrow {
+  border-bottom-color: #44214d !important; }
+
+.tooltip-inner {
+  background-color: #44214d; }
+
+/******************************* Sections *******************************/
+.feed-section, .single-post-section {
   height: 100%;
   text-align: center;
-  overflow-y: hidden;
-  /*Post Rating*/ }
-  .feed-section .rating, .feed-section .deserved, .feed-section .not-deserved, .story-section .rating, .story-section .deserved, .story-section .not-deserved {
-    color: #ffffff;
-    display: block;
-    margin: auto;
-    border: none; }
-    .feed-section .rating .text, .feed-section .deserved .text, .feed-section .not-deserved .text, .story-section .rating .text, .story-section .deserved .text, .story-section .not-deserved .text {
-      display: block;
-      padding-top: 10px;
-      font-size: 12px; }
-  .feed-section .deserved, .story-section .deserved {
-    background-color: #44214d; }
-  .feed-section .not-deserved, .story-section .not-deserved {
-    background-color: #d394e2; }
-
-.feed-section {
-  /*Search*/
-  /*Post Thumbnail*/
-  /*Post Content*/ }
-  .feed-section .input-group {
-    margin: 50px 0 0 0; }
-    .feed-section .input-group .form-control {
-      height: 45px;
-      font-size: 22px;
-      width: 95%; }
-    .feed-section .input-group .btn {
-      padding: 9px 20px;
-      font-size: 18px;
-      border-radius: 6px !important; }
-  .feed-section .thumbnail, .feed-section .rating, .feed-section .deserved, .feed-section .not-deserved {
-    max-height: 100px;
-    height: 100px; }
-    .feed-section .thumbnail img, .feed-section .rating img, .feed-section .deserved img, .feed-section .not-deserved img {
-      max-height: 100%;
-      width: 100%; }
-  .feed-section .user {
-    color: #856298; }
-  .feed-section .post-title, .feed-section .post-timestamp, .feed-section .inline {
-    text-align: left; }
-  .feed-section .post-title a {
-    color: #333333 !important;
+  overflow-y: hidden; }
+  .feed-section h4, .single-post-section h4 {
     text-transform: capitalize; }
-  .feed-section .post-timestamp {
-    font-size: 10px;
-    color: #8b8b8b; }
-  .feed-section .inline .post-comments, .feed-section .inline .post-regrets, .feed-section .inline .post-company, .feed-section .inline .post-links {
-    margin: 0 3px;
-    font-size: 14px; }
-  .feed-section .inline .post-company, .feed-section .inline .post-company, .feed-section .inline .post-links {
-    color: #8b8b8b; }
-  .feed-section .inline .post-links {
-    display: inline-block;
-    padding: 10px 0 0 0; }
-  .feed-section .inline .label {
-    background-color: #5B3256;
+  .feed-section .post-content, .feed-section .post-regrets-content, .feed-section .comment, .single-post-section .post-content, .single-post-section .post-regrets-content, .single-post-section .comment {
+    text-align: left;
+    padding: 10px 0; }
+
+/* Feed Section Styles */
+.feed-section {
+  /** Search **/ }
+  .feed-section .search .form-control {
+    height: 45px;
+    font-size: 22px;
+    width: 95%; }
+  .feed-section .search .btn {
+    padding: 9px 20px;
+    font-size: 18px;
+    border-radius: 6px !important; }
+
+/* Single Post Section Styles */
+.single-post-section .separator:after {
+  margin: 25px 0;
+  top: 0; }
+.single-post-section .single {
+  font-size: 14px; }
+.single-post-section .post-company, .single-post-section .post-recruiter {
+  padding: 0.4em 1.6em 0.4em; }
+
+/* Comments Section Styles */
+.comments-section .comments .btn {
+  float: right;
+  margin: 10px 0; }
+.comments-section .comment-timestamp {
+  text-align: left;
+  color: #8b8b8b; }
+  .comments-section .comment-timestamp .user a {
+    color: #07487a;
+    font-weight: bold; }
+  .comments-section .comment-timestamp .deserved-it {
+    color: #44214d;
+    font-weight: bold;
+    text-transform: capitalize; }
+  .comments-section .comment-timestamp .fa {
+    font-size: 6px;
+    margin: 0 5px;
+    bottom: 2px;
+    position: relative; }
+.comments-section .comment-links {
+  text-align: left; }
+  .comments-section .comment-links .fa {
+    font-size: 6px;
+    margin: 0 5px;
+    bottom: 2px;
+    position: relative; }
+  .comments-section .comment-links .reply, .comments-section .comment-links .flag {
+    font-weight: bold;
+    text-transform: lowercase; }
+    .comments-section .comment-links .reply a, .comments-section .comment-links .flag a {
+      color: #5B3256; }
+
+/******************************* Thumbnail *******************************/
+/* In Story Detail */
+.thumbnail, .post-thumbnail, .post-rating, .user-thumbnail, .post-image, .single-story-rating, .deserved-btn, .not-deserved-btn {
+  max-height: auto;
+  height: auto; }
+  .thumbnail img, .post-thumbnail img, .post-rating img, .user-thumbnail img, .post-image img, .single-story-rating img, .deserved-btn img, .not-deserved-btn img {
+    max-height: 100%;
+    width: 100%; }
+
+/* In Feed */
+.post-thumbnail, .post-rating {
+  max-height: 100px;
+  height: 100px; }
+
+.user-thumbnail {
+  border: none; }
+
+.post-image {
+  margin: 10px 0;
+  max-height: 250px !important;
+  height: 250px !important; }
+
+/******************************* Post Rating Feed *******************************/
+/* In Story Detail */
+.rating, .post-rating, .deserved, .not-deserved, .single-story-rating, .deserved-btn, .not-deserved-btn {
+  color: #ffffff;
+  display: block;
+  margin: auto;
+  border: none; }
+  .rating .text, .post-rating .text, .deserved .text, .not-deserved .text, .single-story-rating .text, .deserved-btn .text, .not-deserved-btn .text {
+    display: block;
+    padding-top: 10px;
+    font-size: 11px; }
+
+/* In Feed */
+.deserved {
+  background-color: #44214d; }
+
+.not-deserved {
+  background-color: #d394e2; }
+
+/******************************* Post Rating Story Detail Page *******************************/
+.single-story-rating h1 {
+  font-size: 60px; }
+
+.deserved-btn, .not-deserved-btn {
+  background-color: #0377ba;
+  width: 48%;
+  margin: 0 1% 15% 1%;
+  float: left; }
+  .deserved-btn a, .not-deserved-btn a {
     color: #ffffff;
-    font-weight: 400; }
+    font-size: 10px; }
+    .deserved-btn a:hover, .not-deserved-btn a:hover {
+      text-decoration: none; }
+  .deserved-btn:hover, .not-deserved-btn:hover {
+    background-color: #0497ec; }
+  .deserved-btn .fa, .not-deserved-btn .fa {
+    font-size: 3em;
+    display: block; }
+
+.not-deserved-btn {
+  background-color: #07487a; }
+  .not-deserved-btn:hover {
+    background-color: #042c4a; }
+
+/******************************* Post Meta *******************************/
+.user a {
+  color: #856298; }
+
+.post-title, .post-timestamp, .inline {
+  text-align: left; }
+
+.post-title a {
+  color: #333333 !important;
+  text-transform: capitalize; }
+
+.post-timestamp {
+  font-size: 10px;
+  color: #8b8b8b; }
+
+.inline .post-comments, .inline .post-regrets, .inline .post-company, .inline .post-links {
+  margin: 0 3px;
+  font-size: 14px; }
+.inline .post-comments a {
+  color: #8b8b8b; }
+.inline .post-links {
+  display: inline-block;
+  padding: 10px 0 0 0; }
+
+.post-company, .post-recruiter {
+  background-color: #5B3256;
+  color: #ffffff;
+  font-weight: 400; }
 
 /******************************* Footer *******************************/
 .footer {
@@ -5165,13 +5276,20 @@ ul {
     font-size: 26px;
     padding: 10px; }
 
+  .header-static-top h3 {
+    font-size: 19px;
+    padding: 8px 0; }
+
+  .form-header {
+    font-size: 22px !important; }
+
   .feed-section .col-xs-3 {
     width: 50%;
     padding-left: 5px;
     padding-right: 5px; }
-    .feed-section .col-xs-3 .rating, .feed-section .col-xs-3 .deserved, .feed-section .col-xs-3 .not-deserved {
+    .feed-section .col-xs-3 .rating, .feed-section .col-xs-3 .post-rating, .feed-section .col-xs-3 .deserved, .feed-section .col-xs-3 .not-deserved, .feed-section .col-xs-3 .single-story-rating, .feed-section .col-xs-3 .deserved-btn, .feed-section .col-xs-3 .not-deserved-btn {
       float: right !important; }
-    .feed-section .col-xs-3 .thumbnail, .feed-section .col-xs-3 .rating, .feed-section .col-xs-3 .deserved, .feed-section .col-xs-3 .not-deserved {
+    .feed-section .col-xs-3 .post-thumbnail, .feed-section .col-xs-3 .post-rating {
       float: left;
       max-width: 185px;
       width: 185px; }
@@ -5181,6 +5299,20 @@ ul {
       text-align: center; }
     .feed-section .col-xs-6 .inline {
       margin-bottom: 15px; }
+
+  .single-post-section .col-sm-3 {
+    padding-left: 100px;
+    padding-right: 100px; }
+    .single-post-section .col-sm-3 .deserved-btn, .single-post-section .col-sm-3 .not-deserved-btn {
+      margin: 0 1% 5% 1%; }
+  .single-post-section .col-sm-9 {
+    margin-top: 5%; }
+    .single-post-section .col-sm-9 .post-image {
+      max-height: 200px !important;
+      height: 200px !important;
+      max-width: 300px !important;
+      width: 300px !important;
+      margin: 10px auto; }
 
   .footer {
     height: 200px;
@@ -5199,19 +5331,25 @@ ul {
     padding-top: 120px; } }
 @media (max-width: 480px) {
   .header-default {
-    height: 75px; }
+    height: 75px;
+    margin-bottom: 30px; }
+
+  .form-header {
+    font-size: 20px !important; }
 
   .header-static-top h2 {
     font-size: 20px;
     padding: 7px; }
 
+  .header-static-top h3 {
+    font-size: 16px;
+    padding: 8px 4px; }
+
   .feed-section {
     /*Search*/ }
-    .feed-section .input-group {
-      margin: 30px 0 0 0; }
-      .feed-section .input-group .form-control, .feed-section .input-group .btn {
-        font-size: 16px; }
-    .feed-section .col-xs-3 .thumbnail, .feed-section .col-xs-3 .rating, .feed-section .col-xs-3 .deserved, .feed-section .col-xs-3 .not-deserved {
+    .feed-section .search .form-control, .feed-section .search .btn {
+      font-size: 16px; }
+    .feed-section .col-xs-3 .post-thumbnail, .feed-section .col-xs-3 .post-rating {
       max-width: 150px;
       width: 150px; }
     .feed-section .post-title a {
@@ -5221,17 +5359,22 @@ ul {
       margin: 0 2.5px !important;
       font-size: 12px; }
 
+  .single-post-section .col-sm-3 {
+    padding-left: 50px;
+    padding-right: 50px; }
+
   .footer li, .footer a, .footer p {
     font-size: 12px; } }
 @media (max-width: 400px) {
+  .header-default {
+    margin-bottom: 20px; }
+
   .feed-section {
     /*Search*/ }
-    .feed-section .input-group {
-      margin: 20px 0 0 0; }
-      .feed-section .input-group .form-control, .feed-section .input-group .btn {
-        font-size: 13px; }
-      .feed-section .input-group .btn {
-        padding: 12px 20px; }
-    .feed-section .col-xs-3 .thumbnail, .feed-section .col-xs-3 .rating, .feed-section .col-xs-3 .deserved, .feed-section .col-xs-3 .not-deserved {
+    .feed-section .search .form-control, .feed-section .search .btn {
+      font-size: 13px; }
+    .feed-section .search .btn {
+      padding: 12px 20px; }
+    .feed-section .col-xs-3 .post-thumbnail, .feed-section .col-xs-3 .post-rating {
       max-width: 125px;
       width: 125px; } }

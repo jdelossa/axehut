@@ -71,7 +71,8 @@ app.controller("PostController", function($scope, $filter) {
         "timestamp": "3 hours",
         "thumbnail" : "images/crown.jpg",
         "regrets" : "regrets",
-        "company" : "Macys"
+        "company" : "Macys",
+        "content" : "Bacon ipsum dolor amet ham pancetta brisket meatloaf porchetta strip steak pork chop. Jerky brisket hamburger short loin, meatball tenderloin leberkas ball tip cupim venison t-bone rump pancetta. Rump shankle spare ribs sirloin tail brisket. Filet mignon meatloaf pig tri-tip alcatra capicola strip steak. Kielbasa sirloin chuck boudin, biltong salami tongue. Salami meatloaf sausage, bacon cupim capicola tongue fatback beef beef ribs drumstick doner andouille. Jowl porchetta ground round cow brisket turkey hamburger leberkas. Salami sausage corned beef tongue picanha, chicken tail pancetta doner porchetta jowl meatloaf short ribs frankfurter. Ground round fatback shoulder, tri-tip hamburger boudin doner short loin t-bone pancetta kevin shank. Cow meatball tongue shank pork. Landjaeger drumstick hamburger, shankle biltong chuck t-bone venison rump corned beef sausage ground round kevin. Hamburger frankfurter biltong, tri-tip cupim ball tip venison fatback prosciutto kielbasa shankle boudin. Short ribs ham cow, fatback meatball beef ribs shank doner turducken."
     },
     {
         "id": 7,

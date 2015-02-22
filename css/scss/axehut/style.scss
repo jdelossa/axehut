@@ -10,6 +10,9 @@ $trendy-pink: #856298; /*Base Color*/
 $lavender: #d394e2; /*Hightlight Color*/
 $bossanova: #44214d; /*Hightlight Color 2*/
 $finn: #5B3256; /*Footer*/
+/* Blues */
+$lochmara: #0377ba;
+$venice-blue: #07487a;
 /* Basics */
 $white: #ffffff;
 $off-white: #cdcdcd;
@@ -54,10 +57,11 @@ ul {
 	@extend .navbar-default;
 	background-color: $trendy-pink;
 	height: 100px;
+    margin-bottom: 50px;
 }
 .header-static-top {
 	@extend .navbar-static-top;
-    h2 {
+    h2, h3 {
         position: absolute;
         padding: 15px;
         color: $white;
@@ -67,10 +71,15 @@ ul {
         font-weight: 200;
     }
 }
-/******************************* Universal Styles *******************************/
+.form-header {
+    text-transform: capitalize !important;
+    padding: 0 !important;
+}
+/******************************* Centered Rows  *******************************/
 .row-centered {
     text-align: center;
 }
+/******************************* Border Bottom  *******************************/
 .separator:after {
     border-bottom: solid 1px $silver;
     display: block;
@@ -78,40 +87,30 @@ ul {
     position: relative;
     top: 25px;
 }
-/******************************* Section *******************************/
-.feed-section, .story-section {
+.tooltip-arrow {
+    border-bottom-color: $bossanova !important; 
+}
+.tooltip-inner {
+    background-color: $bossanova;
+}
+/******************************* Sections *******************************/
+.feed-section, .single-post-section {
     height: 100%;
     text-align: center;
-    overflow-y: hidden; 
+    overflow-y: hidden;
 
-    /*Post Rating*/
-    .rating {
-        @extend .thumbnail;
-        color: $white;
-        display: block;
-        margin: auto;
-        border: none; 
-
-        .text {
-            display: block;
-            padding-top: 10px; 
-            font-size: 12px;
-        }
+    h4 {
+        text-transform: capitalize;
     }
-    .deserved {
-        @extend .rating;
-        background-color: $bossanova;
-    }
-    .not-deserved {
-        @extend .rating;
-        background-color: $lavender;
+    .post-content, .post-regrets-content, .comment {
+        text-align: left;
+        padding: 10px 0;
     }
 }
+/* Feed Section Styles */
 .feed-section {
-    /*Search*/
-    .input-group {
-        margin: 50px 0 0 0;
-
+    /** Search **/
+    .search {
         .form-control {
             height: 45px;
             font-size: 22px;
@@ -123,51 +122,196 @@ ul {
             border-radius: 6px !important;
         }
     }
-    /*Post Thumbnail*/
-    .thumbnail {
-        max-height: 100px;
-        height: 100px;
+}
 
-         img {
-            max-height: 100%;
-            width: 100%;
-         }
-        
+/* Single Post Section Styles */
+.single-post-section{
+    .separator:after {
+       margin: 25px 0;
+        top: 0
     }
-    /*Post Content*/
-    .user {
-        color: $trendy-pink;
+    .single {
+        font-size: 14px;
     }
-    .post-title, .post-timestamp, .inline {
+    .post-company, .post-recruiter {
+        padding: 0.4em 1.6em 0.4em;
+    }
+}
+/* Comments Section Styles */ 
+.comments-section {
+    .comments {
+        .btn {
+            float: right;
+            margin: 10px 0;
+        }
+    }
+    .comment-timestamp {
         text-align: left;
-    }
-    .post-title a {
-        color: $mine-shaft !important;
-        text-transform: capitalize;
-    }
-    .post-timestamp {
-        font-size: 10px;
         color: $gray;
+
+        .user a {
+            color: $venice-blue;
+            font-weight: bold;
+        }
+        .deserved-it {
+            color: $bossanova;
+            font-weight: bold;
+            text-transform: capitalize;
+        }
+        .fa {
+            font-size: 6px;
+            margin: 0 5px;
+            bottom: 2px;
+            position: relative;
+        }
     }
-    .inline {
-        .post-comments, .post-regrets, .post-company, .post-links {
-            margin: 0 3px;
-            font-size: 14px;
+    .comment-links {
+        text-align: left;
+
+        .fa {
+            font-size: 6px;
+            margin: 0 5px;
+            bottom: 2px;
+            position: relative;
         }
-        .post-company, .post-company, .post-links {
-            color: $gray;
-        }
-        .post-links {
-            display: inline-block;
-            padding: 10px 0 0 0;
-        }
-        .label {
-            background-color: $finn;
-            color: $white;
-            font-weight: 400;
+        .reply, .flag {
+            font-weight: bold;
+            text-transform: lowercase;
+
+            a {
+                color: $finn;
+            }
         }
     }
 }
+
+
+/******************************* Thumbnail *******************************/
+/* In Story Detail */
+.thumbnail {
+    max-height: auto;
+    height: auto;
+
+     img {
+        max-height: 100%;
+        width: 100%;
+     }
+}
+/* In Feed */
+.post-thumbnail {
+    @extend .thumbnail;
+    max-height: 100px;
+    height: 100px;
+}
+.user-thumbnail {
+    @extend .thumbnail;
+    border: none;
+}
+.post-image {
+    @extend .thumbnail;
+    margin: 10px 0;
+    max-height: 250px !important;
+    height: 250px !important;
+}
+/******************************* Post Rating Feed *******************************/
+/* In Story Detail */
+.rating {
+    color: $white;
+    display: block;
+    margin: auto;
+    border: none; 
+
+    .text {
+        display: block;
+        padding-top: 10px; 
+        font-size: 11px;
+    }
+}
+/* In Feed */
+.post-rating {
+    @extend .rating;
+    @extend .post-thumbnail;
+}
+.deserved {
+    @extend .rating;
+    background-color: $bossanova;
+}
+.not-deserved {
+    @extend .rating;
+    background-color: $lavender;
+}
+/******************************* Post Rating Story Detail Page *******************************/
+.single-story-rating {
+    @extend .rating;
+    @extend .thumbnail;
+    h1 {
+        font-size: 60px;
+    }
+}
+.deserved-btn {
+    @extend .rating;
+    @extend .thumbnail;
+    background-color: $lochmara;
+    width: 48%;
+    margin: 0 1% 15% 1%;
+    float: left;
+    a {
+        color: $white;
+        font-size: 10px;
+
+        &:hover{
+            text-decoration: none;
+        }
+    }
+    &:hover{
+        background-color: lighten($lochmara, 10%);
+    }
+    .fa {
+        font-size: 3em;
+        display: block;
+    }
+}
+.not-deserved-btn {
+    @extend .deserved-btn;
+    background-color: $venice-blue;
+    &:hover{
+        background-color: darken($venice-blue, 10%);
+    }
+}
+/******************************* Post Meta *******************************/
+.user a {
+    color: $trendy-pink;
+}
+.post-title, .post-timestamp, .inline {
+    text-align: left;
+}
+.post-title a {
+    color: $mine-shaft !important;
+    text-transform: capitalize;
+}
+.post-timestamp {
+    font-size: 10px;
+    color: $gray;
+}
+.inline {
+    .post-comments, .post-regrets, .post-company, .post-links {
+        margin: 0 3px;
+        font-size: 14px;
+    }
+    .post-comments a {
+        color: $gray;
+    }
+    .post-links {
+        display: inline-block;
+        padding: 10px 0 0 0;
+    }
+}
+.post-company, .post-recruiter {
+    background-color: $finn;
+    color: $white;
+    font-weight: 400;
+}
+
 /******************************* Footer *******************************/
 .footer {
 	padding: 40px 0;
@@ -213,6 +357,13 @@ ul {
         font-size: 26px;
         padding: 10px;
     }
+    .header-static-top h3 {
+        font-size: 19px;
+        padding: 8px 0;
+    }
+    .form-header {
+        font-size: 22px !important;
+    }
     .feed-section{
         .col-xs-3 {
             width: 50%;
@@ -222,7 +373,7 @@ ul {
             .rating {
                 float: right !important;
             }
-            .thumbnail {
+            .post-thumbnail {
                 float: left;
                 max-width: 185px;
                 width: 185px;
@@ -238,6 +389,26 @@ ul {
                 margin-bottom: 15px;
             }
         }
+    }
+    .single-post-section {
+        .col-sm-3 {
+            padding-left: 100px;
+            padding-right: 100px;
+                .deserved-btn {
+                    margin: 0 1% 5% 1%;
+                }
+        }
+        .col-sm-9 {
+            margin-top: 5%;
+            .post-image {
+                max-height: 200px !important;
+                height: 200px !important;
+                max-width: 300px !important;
+                width: 300px !important;
+                margin: 10px auto;
+            }
+        }
+        
     }
     .footer {
         height: 200px;
@@ -261,22 +432,28 @@ ul {
 @media(max-width: 480px){
     .header-default {
         height: 75px;
+        margin-bottom: 30px;
+    }
+    .form-header {
+        font-size: 20px !important;
     }
     .header-static-top h2{
         font-size: 20px;
         padding: 7px;
     }
+    .header-static-top h3 {
+        font-size: 16px;
+        padding: 8px 4px;
+    }
     .feed-section {
         /*Search*/
-        .input-group {
-            margin: 30px 0 0 0;
-
+        .search {
             .form-control, .btn {
                 font-size: 16px;
             }
         }
         .col-xs-3 {
-            .thumbnail {
+            .post-thumbnail {
                 max-width: 150px;
                 width: 150px;
             }
@@ -292,16 +469,23 @@ ul {
             }
         }
     }
+    .single-post-section {
+        .col-sm-3 {
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+    }
     .footer li, .footer a, .footer p {
         font-size: 12px;
     }
 }
 @media(max-width: 400px) {
+    .header-default {
+        margin-bottom: 20px;
+    }
     .feed-section {
         /*Search*/
-        .input-group {
-            margin: 20px 0 0 0;
-
+        .search {
             .form-control, .btn {
                 font-size: 13px;
             }
@@ -310,7 +494,7 @@ ul {
             }
         }
         .col-xs-3 {
-            .thumbnail {
+            .post-thumbnail {
                 max-width: 125px;
                 width: 125px;
             }

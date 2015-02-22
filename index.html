@@ -83,10 +83,10 @@
         <div class="container">
             <div class="row row-centered separator">
                 <div class="col-xs-12">
-                    <div class="input-group"> 
+                    <div class="input-group search"> 
                         <input type="text" placeholder="Company, username, title ..." class="form-control" data-ng-model="search.$"> 
                         <span class="input-group-btn"> 
-                            <button class="btn btn btn-primary" type="button"> Search </button> 
+                            <button class="btn btn-primary" type="button"> Search </button> 
                         </span> 
                     </div>
                 </div>
@@ -97,17 +97,20 @@
         <!-- Feed -->
         <div class="container" data-ng-controller="PostController">
             <div class="row row-centered separator" data-ng-repeat="post in posts | filter:search:strict">
+                <!-- post rating -->
                 <div class="col-xs-3">
-                    <div class="rating" data-ng-class="{true: 'deserved', false: 'not-deserved'}[post.rating > 50]"><h1>{{post.rating | percentage}}<span class="text">Deserved It</span></h1></div>
+                    <div class="post-rating" data-ng-class="{true: 'deserved', false: 'not-deserved'}[post.rating > 50]"><h1>{{post.rating | percentage}}<span class="text">Deserved It</span></h1></div>
                 </div>
+                <!-- post thumbnail -->
                 <div class="col-xs-3">
-                    <div class="thumbnail"><img src="images/default.png" data-ng-src="{{post.thumbnail}}" alt="Post Image"/></div>
+                    <div class="post-thumbnail"><img src="images/default.png" data-ng-src="{{post.thumbnail}}" alt="Post Image"/></div>
                 </div>
+                <!-- post meta-->
                 <div class="col-xs-6">
                     <div class="post-title"><h4><a href="story_detail.html">{{post.title}}</a></h4></div>
                     <div class="post-timestamp"><p>Submitted {{post.timestamp}} ago by <span class="user">{{post.user}}</span></p></div>
                     <div class="inline">
-                        <span class="post-comments">{{post.comments}} comments</span>
+                        <span class="post-comments"><a href="#">{{post.comments}} comments</a></span>
                         <span class="post-regrets text-danger">{{post.regrets}}</span>
                         <span class="post-company label">{{post.company}}</span>
                     </div>
@@ -116,7 +119,7 @@
                         <span class="post-links"><a data-toggle="modal" data-target="#save">Save</a></span>
                         <span class="post-links"><a data-toggle="modal" data-target="#report">Report</a></span>
                     </div>
-                </div><!-- <span class=""></span> -->
+                </div>
             </div>
         </div>
 
