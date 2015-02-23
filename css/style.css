@@ -5050,7 +5050,7 @@ ul {
   height: 100px;
   margin-bottom: 50px; }
 
-.header-static-top h2, .header-static-top h3 {
+.header-static-top h3 {
   position: absolute;
   padding: 15px;
   color: #ffffff;
@@ -5088,10 +5088,14 @@ ul {
   overflow-y: hidden; }
   .feed-section h4, .single-post-section h4 {
     text-transform: capitalize; }
-  .feed-section .post-content, .feed-section .post-regrets-content, .feed-section .comment, .single-post-section .post-content, .single-post-section .post-regrets-content, .single-post-section .comment {
+  .feed-section .post-content, .feed-section .post-regrets-content, .single-post-section .post-content, .single-post-section .post-regrets-content {
     text-align: justify;
     padding: 10px 0;
     font-size: 18px; }
+  .feed-section .comment, .single-post-section .comment {
+    text-align: justify;
+    padding: 10px 0;
+    font-size: 15px; }
 
 /* Feed Section Styles */
 .feed-section {
@@ -5103,7 +5107,7 @@ ul {
   .feed-section .search .btn {
     padding: 9px 20px;
     font-size: 18px;
-    border-radius: 6px !important; }
+    border-radius: 4px !important; }
 
 /* Single Post Section Styles */
 .single-post-section .separator:after {
@@ -5113,6 +5117,8 @@ ul {
   font-size: 18px; }
 .single-post-section .post-company, .single-post-section .post-recruiter {
   padding: 0.4em 1.6em 0.4em; }
+.single-post-section h5 {
+  margin: 15px 0; }
 
 /* Comments Section Styles */
 .comments-section .comments .btn {
@@ -5273,10 +5279,6 @@ ul {
   .header-default {
     height: 80px; }
 
-  .header-static-top h2 {
-    font-size: 26px;
-    padding: 10px; }
-
   .header-static-top h3 {
     font-size: 19px;
     padding: 8px 0; }
@@ -5319,6 +5321,10 @@ ul {
     margin: 0 15px; }
   .form-section .control-label {
     padding-bottom: 7px; }
+  .form-section .btn {
+    float: none;
+    text-align: center;
+    width: 100%; }
 
   .footer {
     height: 200px;
@@ -5342,10 +5348,6 @@ ul {
 
   .form-header {
     font-size: 20px !important; }
-
-  .header-static-top h2 {
-    font-size: 20px;
-    padding: 7px; }
 
   .header-static-top h3 {
     font-size: 16px;

@@ -61,7 +61,7 @@ ul {
 }
 .header-static-top {
 	@extend .navbar-static-top;
-    h2, h3 {
+    h3 {
         position: absolute;
         padding: 15px;
         color: $white;
@@ -102,10 +102,15 @@ ul {
     h4 {
         text-transform: capitalize;
     }
-    .post-content, .post-regrets-content, .comment {
+    .post-content, .post-regrets-content {
         text-align: justify;
         padding: 10px 0;
         font-size: 18px;
+    }
+    .comment {
+        text-align: justify;
+        padding: 10px 0;
+        font-size: 15px;
     }
 }
 /* Feed Section Styles */
@@ -120,7 +125,7 @@ ul {
         .btn {
             padding: 9px 20px;
             font-size: 18px;
-            border-radius: 6px !important;
+            border-radius: 4px !important;
         }
     }
 }
@@ -136,6 +141,9 @@ ul {
     }
     .post-company, .post-recruiter {
         padding: 0.4em 1.6em 0.4em;
+    }
+    h5 {
+        margin: 15px 0;
     }
 }
 /* Comments Section Styles */ 
@@ -185,7 +193,6 @@ ul {
         }
     }
 }
-
 
 /******************************* Thumbnail *******************************/
 /* In Story Detail */
@@ -354,10 +361,6 @@ ul {
     .header-default {
         height: 80px;
     }
-    .header-static-top h2{
-        font-size: 26px;
-        padding: 10px;
-    }
     .header-static-top h3 {
         font-size: 19px;
         padding: 8px 0;
@@ -417,6 +420,11 @@ ul {
         .control-label {
             padding-bottom: 7px;
         }
+        .btn {
+            float: none;
+            text-align: center;
+            width: 100%;
+        }
     }
     .footer {
         height: 200px;
@@ -444,10 +452,6 @@ ul {
     }
     .form-header {
         font-size: 20px !important;
-    }
-    .header-static-top h2{
-        font-size: 20px;
-        padding: 7px;
     }
     .header-static-top h3 {
         font-size: 16px;
