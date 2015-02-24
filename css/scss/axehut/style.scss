@@ -132,6 +132,7 @@ ul {
 
 /* Single Post Section Styles */
 .single-post-section{
+    padding-top: 20px; 
     .separator:after {
        margin: 25px 0;
         top: 0
@@ -273,6 +274,7 @@ ul {
     @extend .thumbnail;
     h1 {
         font-size: 60px;
+        margin-top: 0;
     }
 }
 .deserved-btn {

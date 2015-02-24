@@ -5110,17 +5110,19 @@ ul {
     border-radius: 4px !important; }
 
 /* Single Post Section Styles */
-.single-post-section .separator:after {
-  margin: 25px 0;
-  top: 0; }
-.single-post-section .single {
-  font-size: 18px; }
-.single-post-section .post-company, .single-post-section .post-recruiter {
-  padding: 0.4em 1em 0.4em;
-  width: 155px;
-  display: block; }
-.single-post-section h5 {
-  margin: 20px 0; }
+.single-post-section {
+  padding-top: 20px; }
+  .single-post-section .separator:after {
+    margin: 25px 0;
+    top: 0; }
+  .single-post-section .single {
+    font-size: 18px; }
+  .single-post-section .post-company, .single-post-section .post-recruiter {
+    padding: 0.4em 1em 0.4em;
+    width: 155px;
+    display: block; }
+  .single-post-section h5 {
+    margin: 20px 0; }
 
 /* Comments Section Styles */
 .comments-section .comments .btn {
@@ -5212,7 +5214,8 @@ ul {
 
 /******************************* Post Rating Story Detail Page *******************************/
 .single-story-rating h1 {
-  font-size: 60px; }
+  font-size: 60px;
+  margin-top: 0; }
 
 .deserved-btn, .not-deserved-btn {
   background-color: #0377ba;
