@@ -81,11 +81,11 @@ ul {
 }
 /******************************* Border Bottom  *******************************/
 .separator:after {
-    border-bottom: solid 1px $silver;
+    border-bottom: solid 1px #cccccc;
     display: block;
-    margin: 50px 0;
+    margin: 35px 0;
     position: relative;
-    top: 25px;
+    top: 15px;
 }
 .tooltip-arrow {
     border-bottom-color: $bossanova !important; 
@@ -140,10 +140,12 @@ ul {
         font-size: 18px;
     }
     .post-company, .post-recruiter {
-        padding: 0.4em 1.6em 0.4em;
+        padding: 0.4em 1em 0.4em;
+        width: 155px;
+        display: block;
     }
     h5 {
-        margin: 15px 0;
+        margin: 20px 0;
     }
 }
 /* Comments Section Styles */ 
@@ -158,8 +160,8 @@ ul {
         text-align: left;
         color: $gray;
 
-        .user a {
-            color: $venice-blue;
+        a.user {
+            color: $venice-blue !important;
             font-weight: bold;
         }
         .deserved-it {
@@ -183,7 +185,7 @@ ul {
             bottom: 2px;
             position: relative;
         }
-        .reply, .flag {
+        a.reply, a.flag {
             font-weight: bold;
             text-transform: lowercase;
 
@@ -199,6 +201,7 @@ ul {
 .thumbnail {
     max-height: auto;
     height: auto;
+    margin-top: 10px;
 
      img {
         max-height: 100%;
@@ -208,8 +211,10 @@ ul {
 /* In Feed */
 .post-thumbnail {
     @extend .thumbnail;
-    max-height: 100px;
-    height: 100px;
+    max-height: 46px;
+    height: 46px;
+    max-width: 72px;
+    width: 72px;
 }
 .user-thumbnail {
     @extend .thumbnail;
@@ -229,9 +234,14 @@ ul {
     margin: auto;
     border: none; 
 
+    h3 {
+        position: relative;
+        bottom: 2px;
+        margin: 0;
+    }
+
     .text {
         display: block;
-        padding-top: 10px; 
         font-size: 11px;
     }
 }
@@ -239,6 +249,7 @@ ul {
 .post-rating {
     @extend .rating;
     @extend .post-thumbnail;
+    margin-top: 10px;
 }
 .deserved {
     @extend .rating;
@@ -287,10 +298,10 @@ ul {
     }
 }
 /******************************* Post Meta *******************************/
-.user a {
+a.user {
     color: $trendy-pink;
 }
-.post-title, .post-timestamp, .inline {
+.post-title, .post-timestamp {
     text-align: left;
 }
 .post-title a {
@@ -300,19 +311,16 @@ ul {
 .post-timestamp {
     font-size: 10px;
     color: $gray;
+}   
+.post-comments, .post-regrets, .post-company, .post-links {
+    margin: 0 3px;
+    font-size: 14px;
 }
-.inline {
-    .post-comments, .post-regrets, .post-company, .post-links {
-        margin: 0 3px;
-        font-size: 14px;
-    }
-    .post-comments a {
-        color: $gray;
-    }
-    .post-links {
-        display: inline-block;
-        padding: 10px 0 0 0;
-    }
+a.post-comments {
+    color: $gray;
+}
+.post-links {
+    display: inline-block;
 }
 .post-company, .post-recruiter {
     background-color: $finn;

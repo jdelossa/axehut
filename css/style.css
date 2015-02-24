@@ -5071,9 +5071,9 @@ ul {
 .separator:after {
   border-bottom: solid 1px #cccccc;
   display: block;
-  margin: 50px 0;
+  margin: 35px 0;
   position: relative;
-  top: 25px; }
+  top: 15px; }
 
 .tooltip-arrow {
   border-bottom-color: #44214d !important; }
@@ -5116,9 +5116,11 @@ ul {
 .single-post-section .single {
   font-size: 18px; }
 .single-post-section .post-company, .single-post-section .post-recruiter {
-  padding: 0.4em 1.6em 0.4em; }
+  padding: 0.4em 1em 0.4em;
+  width: 155px;
+  display: block; }
 .single-post-section h5 {
-  margin: 15px 0; }
+  margin: 20px 0; }
 
 /* Comments Section Styles */
 .comments-section .comments .btn {
@@ -5127,8 +5129,8 @@ ul {
 .comments-section .comment-timestamp {
   text-align: left;
   color: #8b8b8b; }
-  .comments-section .comment-timestamp .user a {
-    color: #07487a;
+  .comments-section .comment-timestamp a.user {
+    color: #07487a !important;
     font-weight: bold; }
   .comments-section .comment-timestamp .deserved-it {
     color: #44214d;
@@ -5146,25 +5148,28 @@ ul {
     margin: 0 5px;
     bottom: 2px;
     position: relative; }
-  .comments-section .comment-links .reply, .comments-section .comment-links .flag {
+  .comments-section .comment-links a.reply, .comments-section .comment-links a.flag {
     font-weight: bold;
     text-transform: lowercase; }
-    .comments-section .comment-links .reply a, .comments-section .comment-links .flag a {
+    .comments-section .comment-links a.reply a, .comments-section .comment-links a.flag a {
       color: #5B3256; }
 
 /******************************* Thumbnail *******************************/
 /* In Story Detail */
 .thumbnail, .post-thumbnail, .post-rating, .user-thumbnail, .post-image, .single-story-rating, .deserved-btn, .not-deserved-btn {
   max-height: auto;
-  height: auto; }
+  height: auto;
+  margin-top: 10px; }
   .thumbnail img, .post-thumbnail img, .post-rating img, .user-thumbnail img, .post-image img, .single-story-rating img, .deserved-btn img, .not-deserved-btn img {
     max-height: 100%;
     width: 100%; }
 
 /* In Feed */
 .post-thumbnail, .post-rating {
-  max-height: 100px;
-  height: 100px; }
+  max-height: 46px;
+  height: 46px;
+  max-width: 72px;
+  width: 72px; }
 
 .user-thumbnail {
   border: none; }
@@ -5181,12 +5186,18 @@ ul {
   display: block;
   margin: auto;
   border: none; }
+  .rating h3, .post-rating h3, .deserved h3, .not-deserved h3, .single-story-rating h3, .deserved-btn h3, .not-deserved-btn h3 {
+    position: relative;
+    bottom: 2px;
+    margin: 0; }
   .rating .text, .post-rating .text, .deserved .text, .not-deserved .text, .single-story-rating .text, .deserved-btn .text, .not-deserved-btn .text {
     display: block;
-    padding-top: 10px;
     font-size: 11px; }
 
 /* In Feed */
+.post-rating {
+  margin-top: 10px; }
+
 .deserved {
   background-color: #44214d; }
 
@@ -5219,10 +5230,10 @@ ul {
     background-color: #042c4a; }
 
 /******************************* Post Meta *******************************/
-.user a {
+a.user {
   color: #856298; }
 
-.post-title, .post-timestamp, .inline {
+.post-title, .post-timestamp {
   text-align: left; }
 
 .post-title a {
@@ -5233,14 +5244,15 @@ ul {
   font-size: 10px;
   color: #8b8b8b; }
 
-.inline .post-comments, .inline .post-regrets, .inline .post-company, .inline .post-links {
+.post-comments, .post-regrets, .post-company, .post-links {
   margin: 0 3px;
   font-size: 14px; }
-.inline .post-comments a {
+
+a.post-comments {
   color: #8b8b8b; }
-.inline .post-links {
-  display: inline-block;
-  padding: 10px 0 0 0; }
+
+.post-links {
+  display: inline-block; }
 
 .post-company, .post-recruiter {
   background-color: #5B3256;
