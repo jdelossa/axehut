@@ -57,7 +57,7 @@ ul {
 	@extend .navbar-default;
 	background-color: $trendy-pink;
 	height: 100px;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 .header-static-top {
 	@extend .navbar-static-top;
@@ -195,7 +195,15 @@ ul {
         }
     }
 }
-
+.form-section {
+    .form-horizontal .form-group {
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+    .control-label {
+        margin-bottom: 5px;
+    }
+}
 /******************************* Thumbnail *******************************/
 /* In Story Detail */
 .thumbnail {

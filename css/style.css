@@ -5048,7 +5048,7 @@ ul {
 .header-default {
   background-color: #856298;
   height: 100px;
-  margin-bottom: 50px; }
+  margin-bottom: 20px; }
 
 .header-static-top h3 {
   position: absolute;
@@ -5153,6 +5153,12 @@ ul {
     text-transform: lowercase; }
     .comments-section .comment-links a.reply a, .comments-section .comment-links a.flag a {
       color: #5B3256; }
+
+.form-section .form-horizontal .form-group {
+  margin-left: 40px;
+  margin-right: 40px; }
+.form-section .control-label {
+  margin-bottom: 5px; }
 
 /******************************* Thumbnail *******************************/
 /* In Story Detail */
