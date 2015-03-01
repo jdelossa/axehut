@@ -5108,6 +5108,9 @@ ul {
     padding: 9px 20px;
     font-size: 18px;
     border-radius: 4px !important; }
+  .feed-section .col-xs-2 {
+    padding-left: 0 !important;
+    padding-right: 0 !important; }
 
 /* Single Post Section Styles */
 .single-post-section {
@@ -5124,7 +5127,7 @@ ul {
     width: 155px;
     display: block; }
   .single-post-section h5 {
-    margin: 10px 0; }
+    margin: 15px 0; }
 
 /* Comments Section Styles */
 .comments-section .comments .btn {
@@ -5152,17 +5155,23 @@ ul {
     margin: 0 5px;
     bottom: 2px;
     position: relative; }
+  .comments-section .comment-links .upvote, .comments-section .comment-links .downvote {
+    text-transform: lowercase; }
   .comments-section .comment-links a.reply, .comments-section .comment-links a.flag {
     font-weight: bold;
     text-transform: lowercase; }
     .comments-section .comment-links a.reply a, .comments-section .comment-links a.flag a {
       color: #5B3256; }
 
-.form-section .form-horizontal .form-group {
-  margin-left: 40px;
-  margin-right: 40px; }
-.form-section .control-label {
-  margin-bottom: 5px; }
+.form-section {
+  font-size: 18px; }
+  .form-section .form-horizontal .form-group {
+    margin-left: 80px;
+    margin-right: 80px; }
+  .form-section .control-label {
+    margin-bottom: 5px; }
+  .form-section .checkbox {
+    padding-left: 0; }
 
 /******************************* Thumbnail *******************************/
 /* In Story Detail */
@@ -5390,6 +5399,10 @@ a.post-comments, a.post-links {
     .feed-section .inline .post-comments, .feed-section .inline .post-regrets, .feed-section .inline .post-company {
       margin: 0 2.5px !important;
       font-size: 12px; }
+
+  .form-section .form-horizontal .form-group {
+    margin-left: 0px;
+    margin-right: 0px; }
 
   .single-post-section .col-sm-3 {
     padding-left: 50px;
