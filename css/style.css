@@ -5117,12 +5117,14 @@ ul {
     top: 0; }
   .single-post-section .single {
     font-size: 18px; }
+  .single-post-section .post-timestamp {
+    text-transform: lowercase; }
   .single-post-section .post-company, .single-post-section .post-recruiter {
     padding: 0.4em 1em 0.4em;
     width: 155px;
     display: block; }
   .single-post-section h5 {
-    margin: 20px 0; }
+    margin: 10px 0; }
 
 /* Comments Section Styles */
 .comments-section .comments .btn {
@@ -5257,7 +5259,8 @@ a.user {
   margin: 0 3px;
   font-size: 14px; }
 
-a.post-comments {
+a.post-comments, a.post-links {
+  text-transform: lowercase;
   color: #8b8b8b; }
 
 .post-links {

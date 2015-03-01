@@ -140,13 +140,16 @@ ul {
     .single {
         font-size: 18px;
     }
+    .post-timestamp {
+        text-transform: lowercase;
+    }
     .post-company, .post-recruiter {
         padding: 0.4em 1em 0.4em;
         width: 155px;
         display: block;
     }
     h5 {
-        margin: 20px 0;
+        margin: 10px 0;
     }
 }
 /* Comments Section Styles */ 
@@ -326,7 +329,8 @@ a.user {
     margin: 0 3px;
     font-size: 14px;
 }
-a.post-comments {
+a.post-comments, a.post-links {
+    text-transform: lowercase;
     color: $gray;
 }
 .post-links {
