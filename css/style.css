@@ -5376,11 +5376,11 @@ a.post-comments, a.post-links {
     .feed-section .search .form-control, .feed-section .search .btn {
       font-size: 16px; }
     .feed-section .post-title a {
-      font-size: 14px;
+      font-size: 16px;
       margin: 0 2.5px; }
     .feed-section .inline .post-comments, .feed-section .inline .post-regrets, .feed-section .inline .post-company {
       margin: 0 2.5px !important;
-      font-size: 12px; }
+      font-size: 14px; }
     .feed-section .col-xs-2 {
       padding-left: 15px;
       padding-right: 65px; }
