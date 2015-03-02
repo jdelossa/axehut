@@ -99,7 +99,7 @@
             <div class="row row-centered separator" data-ng-repeat="post in posts | filter:search:strict">
                 <!-- post rating -->
                 <div class="col-xs-2">
-                    <div class="post-rating" data-ng-class="{true: 'deserved', false: 'not-deserved'}[post.rating > 50]"><h3>{{post.rating | percentage}}<div class="text">Deserved It</div></h3></div>
+                    <div class="post-rating" data-ng-class="{true: 'deserved', false: 'not-deserved'}[post.rating > 50]"><h3>{{post.rating}}<span class="percentage">%</span><div class="text">Deserved It</div></h3></div>
                 </div>
                 <!-- post thumbnail -->
                 <div class="col-xs-2">
@@ -113,13 +113,15 @@
                             <a href="#" class="user">{{post.user}}</a>
                         </p>
                     </div>
-                    
-                    <a href="#" class="post-comments">{{post.comments}} comments</a>
-                    <a href="#" class="post-regrets text-danger">{{post.regrets}}</a>
-                    <a href="#" class="post-company label">{{post.company}}</a>
-                    <a href="#" class="post-links" data-toggle="modal" data-target="#share">Share</a>
-                    <a href="#" class="post-links" data-toggle="modal" data-target="#save">Save</a>
-                    <a href="#" class="post-links" data-toggle="modal" data-target="#report">Report</a>
+                   
+                    <div class="post-meta"> 
+                        <a href="#" class="post-comments">{{post.comments}} comments</a>
+                        <a href="#" class="post-regrets text-danger">{{post.regrets}}</a>
+                        <a href="#" class="post-company label">{{post.company}}</a>
+                        <a href="#" class="post-links" data-toggle="modal" data-target="#share">Share</a>
+                        <a href="#" class="post-links" data-toggle="modal" data-target="#save">Save</a>
+                        <a href="#" class="post-links" data-toggle="modal" data-target="#report">Report</a>
+                    </div>
                 
                    <!--  </div> -->
                 </div>

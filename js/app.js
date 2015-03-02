@@ -1,4 +1,4 @@
-var app = angular.module('feed', ['percentage']);
+var app = angular.module('feed', []);
 
 app.controller("PostController", function($scope, $filter) {
   $scope.posts = [
@@ -103,17 +103,3 @@ app.controller("PostController", function($scope, $filter) {
   searchAll.clear();
   searchAll.sendKeys('i');
 });
-
-
-angular.module('percentage', [])
-  .filter('percentage', ['$window', function ($window) {
-      return function (input, decimals, suffix) {
-          decimals = angular.isNumber(decimals)? decimals :  3;
-          suffix = suffix || '%';
-          if ($window.isNaN(input)) {
-              return '';
-          }
-          return Math.round(input * Math.pow(10, decimals + 0))/Math.pow(10, decimals) + suffix
-      };
-  }]);
-
