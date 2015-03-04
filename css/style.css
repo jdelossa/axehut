@@ -5067,6 +5067,27 @@ ul {
 .row-centered {
   text-align: center; }
 
+/******************************* Focus Inputs *******************************/
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus {
+  border-color: #8c8c8c;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px #cccccc;
+  outline: 0 none; }
+
 /******************************* Border Bottom  *******************************/
 .separator:after {
   border-bottom: solid 1px #cccccc;
@@ -5105,7 +5126,7 @@ ul {
     font-size: 22px;
     width: 95%; }
   .feed-section .search .btn {
-    padding: 9px 20px;
+    padding: 6px 20px;
     font-size: 18px;
     border-radius: 4px !important; }
   .feed-section .col-xs-2 {
@@ -5324,8 +5345,35 @@ a.post-comments, a.post-links {
   .single-post-section .col-sm-3 {
     padding-left: 100px;
     padding-right: 100px; }
-    .single-post-section .col-sm-3 .deserved-btn, .single-post-section .col-sm-3 .not-deserved-btn {
-      margin: 0 1% 5% 1%; }
+    .single-post-section .col-sm-3 .single-story-rating {
+      width: 150px; }
+      .single-post-section .col-sm-3 .single-story-rating h1 {
+        font-size: 50px;
+        margin-top: 0; }
+    .single-post-section .col-sm-3 .post-vote {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      z-index: 1060;
+      background: #9d80ad; }
+      .single-post-section .col-sm-3 .post-vote h5 {
+        padding-left: 10px;
+        display: inline-block;
+        float: left; }
+      .single-post-section .col-sm-3 .post-vote .fa {
+        font-size: 1.3em; }
+      .single-post-section .col-sm-3 .post-vote .deserved-btn, .single-post-section .col-sm-3 .post-vote .not-deserved-btn {
+        float: right;
+        margin: 2.5% 1%;
+        width: 17%; }
+    .single-post-section .col-sm-3 .post-vote::before {
+      -webkit-filter: blur(4px);
+      filter: blur(4px);
+      color: transparent;
+      margin: 10px;
+      text-shadow: 0px 0px 6px #000, 0px 0px 3px #000; }
   .single-post-section .col-sm-9 {
     margin-top: 5%; }
     .single-post-section .col-sm-9 .post-image {
@@ -5392,6 +5440,8 @@ a.post-comments, a.post-links {
     margin-left: 0px;
     margin-right: 0px; }
 
+  .single-post-section .post-recruiter, .single-post-section .post-company {
+    margin: auto; }
   .single-post-section .col-sm-3 {
     padding-left: 50px;
     padding-right: 50px; }

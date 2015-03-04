@@ -79,9 +79,30 @@ ul {
 .row-centered {
     text-align: center;
 }
+/******************************* Focus Inputs *******************************/
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus {   
+  border-color: darken($silver, 25%);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px $silver;
+  outline: 0 none;
+}
 /******************************* Border Bottom  *******************************/
 .separator:after {
-    border-bottom: solid 1px #cccccc;
+    border-bottom: solid 1px $silver;
     display: block;
     margin: 35px 0;
     position: relative;
@@ -123,7 +144,7 @@ ul {
             width: 95%;
         }
         .btn {
-            padding: 9px 20px;
+            padding: 6px 20px;
             font-size: 18px;
             border-radius: 4px !important;
         }
@@ -405,16 +426,48 @@ a.post-comments, a.post-links {
     .form-header {
         font-size: 22px !important;
     }
-    .feed-section{
-    
-    }
     .single-post-section {
         .col-sm-3 {
             padding-left: 100px;
             padding-right: 100px;
-                .deserved-btn {
-                    margin: 0 1% 5% 1%;
+                .single-story-rating {
+                    width: 150px;
+                    h1 {
+                        font-size: 50px;
+                        margin-top: 0;
+                    }
                 }
+                .post-vote {
+                    position: fixed;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    width: 100%;
+                    z-index: 1060;
+
+                    background: lighten($trendy-pink, 10%);
+                
+                    h5 {
+                        padding-left: 10px;
+                        display: inline-block;
+                        float: left;
+
+                    }
+                    .fa {
+                        font-size: 1.3em;
+                    }
+                    .deserved-btn {
+                        float: right;
+                        margin: 2.5% 1%;
+                        width: 17%;
+                    }
+                }
+                 .post-vote::before {
+                    -webkit-filter: blur(4px);
+                    filter: blur(4px);
+                    color: rgba(0,0,0,0); margin: 10px; text-shadow: 0px 0px 6px #000, 0px 0px 3px #000;
+                }
+
         }
         .col-sm-9 {
             margin-top: 5%;
@@ -504,6 +557,9 @@ a.post-comments, a.post-links {
         }
     }
     .single-post-section {
+        .post-recruiter, .post-company {
+            margin: auto;
+        }
         .col-sm-3 {
             padding-left: 50px;
             padding-right: 50px;
