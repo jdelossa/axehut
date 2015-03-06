@@ -169,7 +169,7 @@ input[type="color"]:focus,
         text-transform: lowercase;
     }
     .post-company, .post-recruiter {
-        padding: 0.4em 1em 0.4em;
+        padding: 0.7em 1em 0.7em;
         width: 155px;
         display: block;
     }
@@ -426,12 +426,17 @@ a.post-comments, a.post-links {
     .form-header {
         font-size: 22px !important;
     }
+    .feed-section {
+        .col-xs-2 {
+            padding-left: 10px;
+        }
+    }
     .single-post-section {
         .col-sm-3 {
-            padding-left: 100px;
-            padding-right: 100px;
+      
                 .single-story-rating {
-                    width: 150px;
+                    width: 33%;
+                    display: block;
                     h1 {
                         font-size: 50px;
                         margin-top: 0;
@@ -446,12 +451,13 @@ a.post-comments, a.post-links {
                     z-index: 1060;
 
                     background: lighten($trendy-pink, 10%);
+
                 
                     h5 {
                         padding-left: 10px;
                         display: inline-block;
                         float: left;
-
+                        color: $white;
                     }
                     .fa {
                         font-size: 1.3em;
@@ -462,12 +468,15 @@ a.post-comments, a.post-links {
                         width: 17%;
                     }
                 }
-                 .post-vote::before {
+ /*                .post-vote::before {
                     -webkit-filter: blur(4px);
                     filter: blur(4px);
                     color: rgba(0,0,0,0); margin: 10px; text-shadow: 0px 0px 6px #000, 0px 0px 3px #000;
+                }*/
+                .post-company, .post-recruiter {
+                    width: 33%;
+                    display: block;
                 }
-
         }
         .col-sm-9 {
             margin-top: 5%;
@@ -509,7 +518,7 @@ a.post-comments, a.post-links {
         padding: 0;
     }
     .body-padding-top {
-        padding-top: 120px;
+        padding-top: 90px;
     }
 }
 @media(max-width: 480px){
@@ -556,15 +565,6 @@ a.post-comments, a.post-links {
             margin-right: 0px;
         }
     }
-    .single-post-section {
-        .post-recruiter, .post-company {
-            margin: auto;
-        }
-        .col-sm-3 {
-            padding-left: 50px;
-            padding-right: 50px;
-        }
-    }
     .footer li, .footer a, .footer p {
         font-size: 12px;
     }
@@ -583,7 +583,7 @@ a.post-comments, a.post-links {
                 padding: 12px 20px;
             }
         }
-        .col-xs-2 {
+/*        .col-xs-2 {
             width: 50%;
             padding-left: 50px;
             padding-right: 50px;
@@ -613,6 +613,6 @@ a.post-comments, a.post-links {
             .post-meta {
                 display: block;
             }
-        }
+        }*/
     }
 }
