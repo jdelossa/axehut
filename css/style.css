@@ -5288,7 +5288,7 @@ a.user {
   color: #8b8b8b; }
 
 .post-comments, .post-regrets, .post-company, .post-links {
-  margin: 0 3px;
+  margin: 5px 3px;
   font-size: 14px; }
 
 a.post-comments, a.post-links {
@@ -5449,6 +5449,8 @@ a.post-comments, a.post-links {
     .feed-section .col-xs-8 {
       padding-left: 25px;
       width: 78.66667%; }
+      .feed-section .col-xs-8 .post-comments, .feed-section .col-xs-8 .post-regrets, .feed-section .col-xs-8 .post-company, .feed-section .col-xs-8 .post-links {
+        margin: 5px 0; }
 
   .form-section .form-horizontal .form-group {
     margin-left: 0px;

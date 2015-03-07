@@ -362,7 +362,7 @@ a.user {
     color: $gray;
 }   
 .post-comments, .post-regrets, .post-company, .post-links {
-    margin: 0 3px;
+    margin: 5px 3px;
     font-size: 14px;
 }
 a.post-comments, a.post-links {
@@ -567,6 +567,9 @@ a.post-comments, a.post-links {
         .col-xs-8 {
             padding-left: 25px;
             width: 78.66667%;
+            .post-comments, .post-regrets, .post-company, .post-links {
+                margin: 5px 0;
+            }
         }
     }
     .form-section {
