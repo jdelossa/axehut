@@ -92,7 +92,6 @@
                 </div>
             </div>
         </div>
-        
 
         <!-- Feed -->
         <div class="container" data-ng-controller="PostController">
@@ -101,7 +100,7 @@
                 <div class="col-xs-2">
                     <!-- post rating -->
                     <div class="post-rating" data-ng-class="{true: 'deserved', false: 'not-deserved'}[post.rating > 50]"><h3>{{post.rating}}<span class="percentage">%</span><div class="text">Deserved It</div></h3></div>
-                      <!-- MOBILE post thumbnail -->
+                    <!-- MOBILE post thumbnail -->
                     <div class="mobile">
                         <div class="post-thumbnail"><img src="images/default.png" data-ng-src="{{post.thumbnail}}" alt="Post Image"/></div>
                     </div>
@@ -123,52 +122,13 @@
                         <a href="#" class="post-comments">{{post.comments}} comments</a>
                         <a href="#" class="post-regrets text-danger">{{post.regrets}}</a>
                         <a href="#" class="post-company label">{{post.company}}</a>
-                        <a href="#" class="post-links" data-toggle="modal" data-target="#share">Share</a>
-                        <a href="#" class="post-links" data-toggle="modal" data-target="#save">Save</a>
+                        <a href="#" class="post-links">Share</a>
+                        <a href="#" class="post-links">Save</a>
                         <a href="#" class="post-links" data-toggle="modal" data-target="#report">Report</a>
                     </div>
                 
-                   <!--  </div> -->
                 </div>
             </div>
-        </div>
-
-        <!-- SHARE Modal -->
-        <div class="modal fade" id="share" tabindex="-1" role="dialog" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title">Share</h4>
-              </div>
-              <div class="modal-body">
-                ...
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- SAVE Modal -->
-        <div class="modal fade" id="save" tabindex="-1" role="dialog" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title">Save</h4>
-              </div>
-              <div class="modal-body">
-                ...
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-              </div>
-            </div>
-          </div>
         </div>
 
         <!-- REPORT Modal -->

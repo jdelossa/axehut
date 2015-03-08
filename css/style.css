@@ -5107,8 +5107,6 @@ input[type="color"]:focus,
   height: 100%;
   text-align: center;
   overflow-y: hidden; }
-  .feed-section h4, .single-post-section h4 {
-    text-transform: capitalize; }
   .feed-section .post-content, .feed-section .post-regrets-content, .single-post-section .post-content, .single-post-section .post-regrets-content {
     text-align: justify;
     padding: 10px 0;
@@ -5121,10 +5119,15 @@ input[type="color"]:focus,
 /* Feed Section Styles */
 .feed-section {
   /** Search **/ }
+  .feed-section h4 {
+    margin-top: 5px;
+    text-transform: capitalize;
+    font-weight: bold; }
   .feed-section .search .form-control {
     height: 45px;
     font-size: 22px;
-    width: 95%; }
+    width: 95%;
+    border-radius: 3px; }
   .feed-section .search .btn {
     padding: 6px 20px;
     font-size: 18px;
@@ -5132,6 +5135,9 @@ input[type="color"]:focus,
   .feed-section .col-xs-2 {
     padding-left: 0;
     padding-right: 0; }
+  .feed-section .post-meta {
+    position: relative;
+    bottom: 15px; }
 
 /* Single Post Section Styles */
 .single-post-section {
@@ -5139,10 +5145,15 @@ input[type="color"]:focus,
   .single-post-section .separator:after {
     margin: 25px 0;
     top: 0; }
+  .single-post-section h4 {
+    margin-top: 25px;
+    text-transform: capitalize;
+    font-weight: bold; }
   .single-post-section .single {
     font-size: 18px; }
   .single-post-section .post-timestamp {
-    text-transform: lowercase; }
+    text-transform: lowercase;
+    bottom: 0; }
   .single-post-section .post-details h5 {
     margin: 15px 0;
     font-weight: bold; }
@@ -5286,7 +5297,9 @@ a.user {
 
 .post-timestamp {
   font-size: 10px;
-  color: #8b8b8b; }
+  color: #8b8b8b;
+  position: relative;
+  bottom: 5px; }
 
 .post-comments, .post-regrets, .post-company, .post-links {
   margin: 5px 3px;
@@ -5348,66 +5361,65 @@ a.post-comments, a.post-links {
 
   .single-post-section .col-sm-3 {
     height: 125px; }
-    .single-post-section .col-sm-3 .single-story-rating {
-      width: 33%;
-      display: block; }
-      .single-post-section .col-sm-3 .single-story-rating h1 {
-        font-size: 60px;
-        margin-top: 10px; }
-      .single-post-section .col-sm-3 .single-story-rating .text {
-        position: relative;
-        top: 15px; }
-    .single-post-section .col-sm-3 .post-vote {
-      position: fixed;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      width: 100%;
-      z-index: 1060;
-      background: #856298; }
-      .single-post-section .col-sm-3 .post-vote h4 {
-        padding-left: 10px;
-        display: inline-block;
-        float: left;
-        color: #ffffff;
-        margin: 25px 0; }
-      .single-post-section .col-sm-3 .post-vote .fa {
-        font-size: 1.3em; }
-      .single-post-section .col-sm-3 .post-vote .deserved-btn, .single-post-section .col-sm-3 .post-vote .not-deserved-btn {
-        float: right;
-        margin: 2.5% 1%;
-        width: 17%; }
-    .single-post-section .col-sm-3 .deserved, .single-post-section .col-sm-3 .not-deserved {
-      display: inline-block;
-      float: left;
-      height: 100%;
-      width: 33% !important; }
-    .single-post-section .col-sm-3 .post-details {
-      width: 33%;
-      padding-left: 25px;
-      float: left; }
-    .single-post-section .col-sm-3 .post-company, .single-post-section .col-sm-3 .post-recruiter {
-      width: initial;
-      font-size: 16px; }
   .single-post-section .col-sm-9 {
     margin-top: 5%; }
-    .single-post-section .col-sm-9 .post-image {
-      max-height: 200px !important;
-      height: 200px !important;
-      max-width: 300px !important;
-      width: 300px !important;
-      margin: 10px auto; }
-
-  .form-section .form-horizontal {
+  .single-post-section .single-story-rating {
+    width: 33%;
+    display: block; }
+    .single-post-section .single-story-rating h1 {
+      font-size: 60px;
+      margin-top: 10px; }
+    .single-post-section .single-story-rating .text {
+      position: relative;
+      top: 15px; }
+  .single-post-section .post-vote {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 1060;
+    background: #856298; }
+    .single-post-section .post-vote h4 {
+      padding-left: 10px;
+      display: inline-block;
+      float: left;
+      color: #ffffff;
+      margin: 25px 0;
+      font-size: 17px; }
+    .single-post-section .post-vote .fa {
+      font-size: 1.3em; }
+    .single-post-section .post-vote .deserved-btn, .single-post-section .post-vote .not-deserved-btn {
+      float: right;
+      margin: 2.5% 1%;
+      width: 17%; }
+  .single-post-section .deserved, .single-post-section .not-deserved {
+    display: inline-block;
+    float: left;
+    height: 100%;
+    width: 33% !important; }
+  .single-post-section .post-details {
+    width: 33%;
+    padding-left: 25px;
+    float: left; }
+  .single-post-section .post-company, .single-post-section .post-recruiter {
+    width: initial;
+    font-size: 16px; }
+  .single-post-section .post-image {
+    max-height: 200px !important;
+    height: 200px !important;
+    max-width: 300px !important;
+    width: 300px !important;
+    margin: 10px auto; }
+  .single-post-section .form-section .form-horizontal {
     margin: 0 15px; }
-  .form-section .control-label {
+  .single-post-section .form-section .control-label {
     padding-bottom: 7px; }
-  .form-section .btn {
+  .single-post-section .form-section .btn {
     float: none;
     text-align: center;
     width: 100%; }
-
-  .footer {
+  .single-post-section .footer {
     height: 200px;
     padding: 20px 0; } }
 @media (min-width: 767px) {
@@ -5423,9 +5435,11 @@ a.post-comments, a.post-links {
   .body-padding-top {
     padding-top: 90px; } }
 @media (max-width: 500px) {
-  .single-post-section .col-sm-3 .post-company {
+  .single-post-section .post-company {
     margin-top: 30px; }
-  .single-post-section .col-sm-3 .post-company, .single-post-section .col-sm-3 .post-recruiter {
+  .single-post-section .post-company, .single-post-section .post-recruiter {
+    font-size: 14px; }
+  .single-post-section .post-vote h4 {
     font-size: 14px; } }
 @media (max-width: 480px) {
   .header-default {
@@ -5441,40 +5455,43 @@ a.post-comments, a.post-links {
 
   .feed-section {
     /*Search*/ }
-    .feed-section .search .form-control, .feed-section .search .btn {
-      font-size: 16px; }
-    .feed-section .post-title a {
-      font-size: 16px;
-      margin: 0 2.5px; }
-    .feed-section .inline .post-comments, .feed-section .inline .post-regrets, .feed-section .inline .post-company {
-      margin: 0 2.5px !important;
-      font-size: 14px; }
     .feed-section .col-xs-2 {
       padding-left: 15px;
       padding-right: 65px; }
     .feed-section .col-xs-8 {
       padding-left: 25px;
+      padding-right: 0;
       width: 78.66667%; }
-      .feed-section .col-xs-8 .post-comments, .feed-section .col-xs-8 .post-regrets, .feed-section .col-xs-8 .post-company, .feed-section .col-xs-8 .post-links {
-        margin: 5px 0; }
+    .feed-section .search .form-control, .feed-section .search .btn {
+      font-size: 16px; }
+    .feed-section .post-title a {
+      font-size: 16px;
+      margin: 0 2.5px; }
+    .feed-section .post-meta {
+      bottom: 5px; }
+    .feed-section .post-comments, .feed-section .post-regrets, .feed-section .post-company, .feed-section .post-links {
+      margin: 5px 2px; }
+    .feed-section .inline .post-comments, .feed-section .inline .post-regrets, .feed-section .inline .post-company {
+      margin: 0 2.5px !important;
+      font-size: 14px; }
 
-  .single-post-section .post-vote h4 {
-    font-size: 11px; }
   .single-post-section .col-sm-3 {
     height: 85px; }
-    .single-post-section .col-sm-3 .single-story-rating h1 {
-      font-size: 40px;
-      margin-top: 0; }
-    .single-post-section .col-sm-3 .single-story-rating .text {
-      font-size: 9px;
-      position: relative;
-      top: 7px; }
-    .single-post-section .col-sm-3 .post-details {
-      padding-left: 10px; }
-      .single-post-section .col-sm-3 .post-details h5 {
-        font-size: 13px; }
-    .single-post-section .col-sm-3 .post-company, .single-post-section .col-sm-3 .post-recruiter {
-      font-size: 10px; }
+  .single-post-section .post-vote h4 {
+    font-size: 11px; }
+  .single-post-section .single-story-rating h1 {
+    font-size: 40px;
+    margin-top: 0; }
+  .single-post-section .single-story-rating .text {
+    font-size: 9px;
+    position: relative;
+    top: 7px; }
+  .single-post-section .post-details {
+    padding-left: 10px; }
+    .single-post-section .post-details h5 {
+      font-size: 13px; }
+  .single-post-section .post-company, .single-post-section .post-recruiter {
+    font-size: 10px; }
 
   .form-section .form-horizontal .form-group {
     margin-left: 0px;
@@ -5496,11 +5513,10 @@ a.post-comments, a.post-links {
 
   .feed-section {
     /*Search*/ }
+    .feed-section .col-xs-8 {
+      padding-left: 25px;
+      width: 74.667% !important; }
     .feed-section .search .form-control, .feed-section .search .btn {
       font-size: 13px; }
     .feed-section .search .btn {
-      padding: 12px 20px; }
-
-  .col-xs-8 {
-    padding-left: 25px;
-    width: 74.667% !important; } }
+      padding: 12px 20px; } }
