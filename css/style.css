@@ -5143,12 +5143,13 @@ input[type="color"]:focus,
     font-size: 18px; }
   .single-post-section .post-timestamp {
     text-transform: lowercase; }
+  .single-post-section .post-details h5 {
+    margin: 15px 0;
+    font-weight: bold; }
   .single-post-section .post-company, .single-post-section .post-recruiter {
     padding: 0.7em 1em 0.7em;
     width: 155px;
     display: block; }
-  .single-post-section h5 {
-    margin: 15px 0; }
 
 /* Comments Section Styles */
 .comments-section .comments .btn {
@@ -5345,49 +5346,49 @@ a.post-comments, a.post-links {
   .feed-section .col-xs-2 {
     padding-left: 10px; }
 
-  .single-post-section h5 {
-    display: none;
-    visibility: hidden; }
-  .single-post-section .col-sm-3 .single-story-rating {
-    width: 33%;
-    display: block; }
-    .single-post-section .col-sm-3 .single-story-rating h1 {
-      font-size: 50px;
-      margin-top: 0; }
-  .single-post-section .col-sm-3 .post-vote {
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    z-index: 1060;
-    background: #9d80ad; }
-    .single-post-section .col-sm-3 .post-vote h4 {
-      padding-left: 10px;
+  .single-post-section .col-sm-3 {
+    height: 125px; }
+    .single-post-section .col-sm-3 .single-story-rating {
+      width: 33%;
+      display: block; }
+      .single-post-section .col-sm-3 .single-story-rating h1 {
+        font-size: 60px;
+        margin-top: 10px; }
+      .single-post-section .col-sm-3 .single-story-rating .text {
+        position: relative;
+        top: 15px; }
+    .single-post-section .col-sm-3 .post-vote {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      z-index: 1060;
+      background: #856298; }
+      .single-post-section .col-sm-3 .post-vote h4 {
+        padding-left: 10px;
+        display: inline-block;
+        float: left;
+        color: #ffffff;
+        margin: 25px 0; }
+      .single-post-section .col-sm-3 .post-vote .fa {
+        font-size: 1.3em; }
+      .single-post-section .col-sm-3 .post-vote .deserved-btn, .single-post-section .col-sm-3 .post-vote .not-deserved-btn {
+        float: right;
+        margin: 2.5% 1%;
+        width: 17%; }
+    .single-post-section .col-sm-3 .deserved, .single-post-section .col-sm-3 .not-deserved {
       display: inline-block;
       float: left;
-      color: #ffffff;
-      margin: 25px 0; }
-    .single-post-section .col-sm-3 .post-vote .fa {
-      font-size: 1.3em; }
-    .single-post-section .col-sm-3 .post-vote .deserved-btn, .single-post-section .col-sm-3 .post-vote .not-deserved-btn {
-      float: right;
-      margin: 2.5% 1%;
-      width: 17%; }
-  .single-post-section .col-sm-3 .deserved {
-    display: inline-block;
-    float: left;
-    width: 200px !important;
-    /*     h1 {
-             font-size: 40px
-         }
-         .text {
-             font-size: 8px;
-         }*/ }
-  .single-post-section .col-sm-3 .post-company, .single-post-section .col-sm-3 .post-recruiter {
-    display: inline-block;
-    float: left;
-    width: 33%; }
+      height: 100%;
+      width: 33% !important; }
+    .single-post-section .col-sm-3 .post-details {
+      width: 33%;
+      padding-left: 25px;
+      float: left; }
+    .single-post-section .col-sm-3 .post-company, .single-post-section .col-sm-3 .post-recruiter {
+      width: initial;
+      font-size: 16px; }
   .single-post-section .col-sm-9 {
     margin-top: 5%; }
     .single-post-section .col-sm-9 .post-image {
@@ -5421,6 +5422,11 @@ a.post-comments, a.post-links {
 
   .body-padding-top {
     padding-top: 90px; } }
+@media (max-width: 500px) {
+  .single-post-section .col-sm-3 .post-company {
+    margin-top: 30px; }
+  .single-post-section .col-sm-3 .post-company, .single-post-section .col-sm-3 .post-recruiter {
+    font-size: 14px; } }
 @media (max-width: 480px) {
   .header-default {
     height: 75px;
@@ -5451,6 +5457,24 @@ a.post-comments, a.post-links {
       width: 78.66667%; }
       .feed-section .col-xs-8 .post-comments, .feed-section .col-xs-8 .post-regrets, .feed-section .col-xs-8 .post-company, .feed-section .col-xs-8 .post-links {
         margin: 5px 0; }
+
+  .single-post-section .post-vote h4 {
+    font-size: 11px; }
+  .single-post-section .col-sm-3 {
+    height: 85px; }
+    .single-post-section .col-sm-3 .single-story-rating h1 {
+      font-size: 40px;
+      margin-top: 0; }
+    .single-post-section .col-sm-3 .single-story-rating .text {
+      font-size: 9px;
+      position: relative;
+      top: 7px; }
+    .single-post-section .col-sm-3 .post-details {
+      padding-left: 10px; }
+      .single-post-section .col-sm-3 .post-details h5 {
+        font-size: 13px; }
+    .single-post-section .col-sm-3 .post-company, .single-post-section .col-sm-3 .post-recruiter {
+      font-size: 10px; }
 
   .form-section .form-horizontal .form-group {
     margin-left: 0px;
