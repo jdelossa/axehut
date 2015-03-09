@@ -5221,7 +5221,8 @@ input[type="color"]:focus,
   max-height: 46px;
   height: 46px;
   max-width: 72px;
-  width: 72px; }
+  width: 72px;
+  border: none; }
 
 .user-thumbnail {
   border: none; }
@@ -5466,7 +5467,7 @@ a.post-comments, a.post-links {
       font-size: 16px; }
     .feed-section .post-title a {
       font-size: 16px;
-      margin: 0 2.5px; }
+      margin: 0 0.5px; }
     .feed-section .post-meta {
       bottom: 5px; }
     .feed-section .post-comments, .feed-section .post-regrets, .feed-section .post-company, .feed-section .post-links {

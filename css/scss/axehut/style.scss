@@ -277,6 +277,7 @@ input[type="color"]:focus,
     height: 46px;
     max-width: 72px;
     width: 72px;
+    border: none;
 }
 .user-thumbnail {
     @extend .thumbnail;
@@ -597,7 +598,7 @@ a.post-comments, a.post-links {
         }
         .post-title a {
             font-size: 16px;
-            margin: 0 2.5px;
+            margin: 0 0.5px;
         }
         .post-meta {
             bottom: 5px; 
