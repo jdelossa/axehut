@@ -5088,6 +5088,9 @@ input[type="color"]:focus,
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px #cccccc;
   outline: 0 none; }
 
+.text-danger {
+  color: #e67e22; }
+
 /******************************* Border Bottom  *******************************/
 .separator:after {
   border-bottom: solid 1px #cccccc;
@@ -5109,7 +5112,6 @@ input[type="color"]:focus,
   overflow-y: hidden; }
   .feed-section .post-content, .feed-section .post-regrets-content, .single-post-section .post-content, .single-post-section .post-regrets-content {
     text-align: justify;
-    padding: 10px 0;
     font-size: 18px; }
   .feed-section .comment, .single-post-section .comment {
     text-align: justify;
@@ -5218,11 +5220,14 @@ input[type="color"]:focus,
 
 /* In Feed */
 .post-thumbnail, .post-rating {
-  max-height: 46px;
-  height: 46px;
-  max-width: 72px;
-  width: 72px;
-  border: none; }
+  max-height: 48px;
+  height: 48px;
+  max-width: 78px;
+  width: 78px;
+  /*border: none;*/
+  border-radius: 0;
+  position: relative;
+  right: 10px; }
 
 .user-thumbnail {
   border: none; }
@@ -5231,6 +5236,12 @@ input[type="color"]:focus,
   margin: 10px 0;
   max-height: 250px !important;
   height: 250px !important; }
+
+.desktop {
+  width: 10.66667%; }
+
+.post-desktop {
+  width: 70.66667%; }
 
 /******************************* Post Rating Feed *******************************/
 /* In Story Detail */
@@ -5242,7 +5253,8 @@ input[type="color"]:focus,
   .rating h3, .post-rating h3, .deserved h3, .not-deserved h3, .single-story-rating h3, .deserved-btn h3, .not-deserved-btn h3 {
     position: relative;
     bottom: 2px;
-    margin: 0; }
+    margin: 0;
+    text-transform: lowercase; }
   .rating .text, .post-rating .text, .deserved .text, .not-deserved .text, .single-story-rating .text, .deserved-btn .text, .not-deserved-btn .text {
     display: block;
     font-size: 11px; }
@@ -5251,7 +5263,13 @@ input[type="color"]:focus,
 
 /* In Feed */
 .post-rating {
-  margin-top: 10px; }
+  margin-top: 10px;
+  max-height: 46px;
+  height: 46px;
+  max-width: 72px;
+  width: 72px;
+  border-radius: 3px;
+  right: 0; }
 
 .deserved {
   background-color: #44214d; }
@@ -5297,7 +5315,7 @@ a.user {
   text-transform: capitalize; }
 
 .post-timestamp {
-  font-size: 10px;
+  font-size: 11px;
   color: #8b8b8b;
   position: relative;
   bottom: 5px; }
@@ -5359,6 +5377,12 @@ a.post-comments, a.post-links {
 
   .feed-section .col-xs-2 {
     padding-left: 10px; }
+  .feed-section .desktop {
+    width: 14.66667%;
+    margin-left: 10px; }
+  .feed-section .post-desktop {
+    padding-left: 25px;
+    width: 63.66667%; }
 
   .single-post-section .col-sm-3 {
     height: 125px; }
@@ -5472,6 +5496,8 @@ a.post-comments, a.post-links {
       bottom: 5px; }
     .feed-section .post-comments, .feed-section .post-regrets, .feed-section .post-company, .feed-section .post-links {
       margin: 5px 2px; }
+    .feed-section .post-rating {
+      right: 7px; }
     .feed-section .inline .post-comments, .feed-section .inline .post-regrets, .feed-section .inline .post-company {
       margin: 0 2.5px !important;
       font-size: 14px; }
@@ -5516,8 +5542,14 @@ a.post-comments, a.post-links {
     /*Search*/ }
     .feed-section .col-xs-8 {
       padding-left: 25px;
-      width: 74.667% !important; }
+      width: 72.667% !important; }
     .feed-section .search .form-control, .feed-section .search .btn {
       font-size: 13px; }
     .feed-section .search .btn {
       padding: 12px 20px; } }
+@media (max-width: 320px) {
+  .feed-section .desktop {
+    width: 14.66667%;
+    margin-left: 10px; }
+  .feed-section .post-desktop {
+    width: 63.66667%; } }
