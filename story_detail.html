@@ -84,26 +84,28 @@
 
                 <!-- Aside -->
                 <div class="col-sm-3">
-                    <div class="single-story-rating" data-ng-class="{true: 'deserved', false: 'not-deserved'}[post.rating > 50]">
-                        <h1>{{post.rating}}<div class="text">voters say the axe was deserved</div></h1>
-                    </div>
+                    <div class="aside">
+                        <div class="single-story-rating" data-ng-class="{true: 'deserved', false: 'not-deserved'}[post.rating > 50]">
+                            <h1>{{post.rating}}<div class="text">voters say the axe was deserved</div></h1>
+                        </div>
 
-                    <div class="post-vote">
-                        <h4>Did this person deserve the axe?</h4>
-                        <div class="deserved-btn"><a href="#"><i class="fa fa-check"></i>Yes</a></div>
-                        <div class="not-deserved-btn"><a href="#"><i class="fa fa-ban"></i>No</a></div>
-                    </div>
+                        <div class="post-vote">
+                            <h4>Did this person deserve the axe?</h4>
+                            <div class="deserved-btn"><a href="#"><i class="fa fa-check"></i>Yes</a></div>
+                            <div class="not-deserved-btn"><a href="#"><i class="fa fa-ban"></i>No</a></div>
+                        </div>
 
-                    <div class="post-detail">
-                        <h5>Company:</h5>
-                        <div class="post-company label single">{{post.company}}</div>
-                    </div>
-                    <div class="post-detail">
-                        <h5>Recruiter Involved:</h5>
-                        <div class="post-recruiter label single">Not Specified</div>
-                    </div>
-                    <div class="post-delete">
-                        <a href="#" class="btn btn-danger"><i class="fa fa-times"></i>Delete Post</a>
+                        <div class="post-detail">
+                            <h5>Company:</h5>
+                            <div class="post-company label single">{{post.company}}</div>
+                        </div>
+                        <div class="post-detail">
+                            <h5>Recruiter Involved:</h5>
+                            <div class="post-recruiter label single">Not Specified</div>
+                        </div>
+                        <div class="post-delete">
+                            <a href="#" class="btn btn-danger"><i class="fa fa-times"></i>Delete Post</a>
+                        </div>
                     </div>
                 </div>
 
@@ -203,15 +205,28 @@
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
 
+    <script>
+    $(document).ready(function() {
+        var sidebar = $('.aside');
+        var top = sidebar.offset().top - parseFloat(sidebar.css('margin-top'));
+      
+        $(window).scroll(function (event) {
+          var y = $(this).scrollTop();
+          if (y >= top) {
+            sidebar.addClass('fixed');
+          } else {
+            sidebar.removeClass('fixed');
+          }
+        });
+    });
+    </script>
+
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
 
     <script type="text/javascript">$(function () {
   $('[data-toggle="tooltip"]').tooltip()})</script>
 
-    <!-- Scrolling Nav JavaScript -->
-    <script src="js/jquery.easing.min.js"></script>
-    <script src="js/scrolling-nav.js"></script>
 
 </body>
 </html>

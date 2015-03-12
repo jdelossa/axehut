@@ -35,6 +35,9 @@ body {
     background-repeat: no-repeat;
     padding-top: 50px;
 }
+section {
+    overflow-x: hidden;
+}
 ul {
     list-style-type: none;
     padding-left: 0;
@@ -196,6 +199,7 @@ input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
         font-size: 18px;
     }
     .post-timestamp {
+        padding-top: 15px;
         text-transform: lowercase;
         bottom: 0;
     }
@@ -208,7 +212,8 @@ input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
     .post-company, .post-recruiter {
         padding: 0.7em 1em 0.7em;
         width: 155px;
-        display: block;  
+        display: block;
+        margin: auto;  
     }
     .narrow {
         padding-left: 40px;
@@ -220,9 +225,10 @@ input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
             padding-right: 10px;
         }
         .btn{
-            width: 100%;
+            width: 155px;
             padding: 0.3em 1em 0.3em;
             font-size: 18px;
+            margin: auto;
         }
     }
 }
@@ -527,7 +533,7 @@ a.post-comments, a.post-links {
             }
             .text {
                 position: relative;
-                top: 15px;
+                top: 1px;
             }
         }
         .post-vote {
@@ -562,10 +568,25 @@ a.post-comments, a.post-links {
             height: 100%;
             width: 33% !important; 
         }
-        .post-detail, .post-delete {
+        .post-detail {
             width: 33%;
             padding-left: 25px;
             float: left;
+            position: relative;
+            bottom: 15px;
+        }
+        .post-delete {
+            float: right;
+            width: 66%;
+            margin-top: 25px;
+            position: relative;
+            bottom: 15px;
+
+            .btn {
+                padding: 0.3em 0.6em 0.3em;
+                width: inherit;
+                font-size: 16px;
+            }
         }
         .post-company, .post-recruiter {
             width: initial;
@@ -612,14 +633,22 @@ a.post-comments, a.post-links {
     .body-padding-top {
         padding-top: 90px;
     }
+    .aside {
+        width: 188px;
+    }
+    .fixed {
+        top: 70px;
+        position: fixed;
+        width: 188px;
+    }
 }
 @media(max-width: 500px){
     .single-post-section {
+        .post-company, .post-recruiter, .post-delete {
+            font-size: 14px;
+        }
         .post-company {
             margin-top: 30px;
-        }
-        .post-company, .post-recruiter {
-            font-size: 14px;
         }
         .post-vote {
             h4 {
@@ -677,6 +706,7 @@ a.post-comments, a.post-links {
         }
     }
     .single-post-section {
+        padding-top: 0;
         .col-sm-3 {
             height: 85px;
         }
@@ -696,8 +726,7 @@ a.post-comments, a.post-links {
                 top: 7px;
             }
         }
-        .post-detail, .post-delete {
-            width: 29%;
+        .post-detail {
             padding-left: 10px;
             h5 {
                 font-size: 13px;
@@ -706,8 +735,19 @@ a.post-comments, a.post-links {
         .post-company, .post-recruiter {
             font-size: 10px;
         }
+        .post-delete {
+            margin-top: 10px;
+            .btn {
+                font-size: 10px;
+                width: 95%;
+            }
+        }
+        .post-company {
+            margin-top: 0;
+        }
         .narrow {
-            padding: 0;
+            padding-left: 15px;
+            padding-right: 15px;
         }
         
     }
@@ -748,6 +788,13 @@ a.post-comments, a.post-links {
             .btn {
                 padding: 12px 20px;
             }
+        }
+    }
+}
+@media(max-width: 428px){
+    .single-post-section{
+        .post-company {
+            margin-top: 29px;
         }
     }
 }

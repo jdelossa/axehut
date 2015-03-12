@@ -5032,6 +5032,9 @@ body {
   background-repeat: no-repeat;
   padding-top: 50px; }
 
+section {
+  overflow-x: hidden; }
+
 ul {
   list-style-type: none;
   padding-left: 0; }
@@ -5176,6 +5179,7 @@ input:focus:-ms-input-placeholder {
   .single-post-section .single {
     font-size: 18px; }
   .single-post-section .post-timestamp {
+    padding-top: 15px;
     text-transform: lowercase;
     bottom: 0; }
   .single-post-section .post-detail h5 {
@@ -5184,7 +5188,8 @@ input:focus:-ms-input-placeholder {
   .single-post-section .post-company, .single-post-section .post-recruiter {
     padding: 0.7em 1em 0.7em;
     width: 155px;
-    display: block; }
+    display: block;
+    margin: auto; }
   .single-post-section .narrow {
     padding-left: 40px;
     padding-right: 40px; }
@@ -5193,9 +5198,10 @@ input:focus:-ms-input-placeholder {
     .single-post-section .post-delete .fa {
       padding-right: 10px; }
     .single-post-section .post-delete .btn {
-      width: 100%;
+      width: 155px;
       padding: 0.3em 1em 0.3em;
-      font-size: 18px; }
+      font-size: 18px;
+      margin: auto; }
 
 /* Comments Section Styles */
 .comments-section .comments .btn {
@@ -5433,7 +5439,7 @@ a.post-comments, a.post-links {
       margin-top: 10px; }
     .single-post-section .single-story-rating .text {
       position: relative;
-      top: 15px; }
+      top: 1px; }
   .single-post-section .post-vote {
     position: fixed;
     left: 0;
@@ -5460,10 +5466,22 @@ a.post-comments, a.post-links {
     float: left;
     height: 100%;
     width: 33% !important; }
-  .single-post-section .post-detail, .single-post-section .post-delete {
+  .single-post-section .post-detail {
     width: 33%;
     padding-left: 25px;
-    float: left; }
+    float: left;
+    position: relative;
+    bottom: 15px; }
+  .single-post-section .post-delete {
+    float: right;
+    width: 66%;
+    margin-top: 25px;
+    position: relative;
+    bottom: 15px; }
+    .single-post-section .post-delete .btn {
+      padding: 0.3em 0.6em 0.3em;
+      width: inherit;
+      font-size: 16px; }
   .single-post-section .post-company, .single-post-section .post-recruiter {
     width: initial;
     font-size: 16px; }
@@ -5495,12 +5513,20 @@ a.post-comments, a.post-links {
     padding: 0; }
 
   .body-padding-top {
-    padding-top: 90px; } }
+    padding-top: 90px; }
+
+  .aside {
+    width: 188px; }
+
+  .fixed {
+    top: 70px;
+    position: fixed;
+    width: 188px; } }
 @media (max-width: 500px) {
+  .single-post-section .post-company, .single-post-section .post-recruiter, .single-post-section .post-delete {
+    font-size: 14px; }
   .single-post-section .post-company {
     margin-top: 30px; }
-  .single-post-section .post-company, .single-post-section .post-recruiter {
-    font-size: 14px; }
   .single-post-section .post-vote h4 {
     font-size: 14px; } }
 @media (max-width: 480px) {
@@ -5539,26 +5565,35 @@ a.post-comments, a.post-links {
       margin: 0 2.5px !important;
       font-size: 14px; }
 
-  .single-post-section .col-sm-3 {
-    height: 85px; }
-  .single-post-section .post-vote h4 {
-    font-size: 11px; }
-  .single-post-section .single-story-rating h1 {
-    font-size: 40px;
-    margin-top: 0; }
-  .single-post-section .single-story-rating .text {
-    font-size: 9px;
-    position: relative;
-    top: 7px; }
-  .single-post-section .post-detail, .single-post-section .post-delete {
-    width: 29%;
-    padding-left: 10px; }
-    .single-post-section .post-detail h5, .single-post-section .post-delete h5 {
-      font-size: 13px; }
-  .single-post-section .post-company, .single-post-section .post-recruiter {
-    font-size: 10px; }
-  .single-post-section .narrow {
-    padding: 0; }
+  .single-post-section {
+    padding-top: 0; }
+    .single-post-section .col-sm-3 {
+      height: 85px; }
+    .single-post-section .post-vote h4 {
+      font-size: 11px; }
+    .single-post-section .single-story-rating h1 {
+      font-size: 40px;
+      margin-top: 0; }
+    .single-post-section .single-story-rating .text {
+      font-size: 9px;
+      position: relative;
+      top: 7px; }
+    .single-post-section .post-detail {
+      padding-left: 10px; }
+      .single-post-section .post-detail h5 {
+        font-size: 13px; }
+    .single-post-section .post-company, .single-post-section .post-recruiter {
+      font-size: 10px; }
+    .single-post-section .post-delete {
+      margin-top: 10px; }
+      .single-post-section .post-delete .btn {
+        font-size: 10px;
+        width: 95%; }
+    .single-post-section .post-company {
+      margin-top: 0; }
+    .single-post-section .narrow {
+      padding-left: 15px;
+      padding-right: 15px; }
 
   .form-section .form-horizontal .form-group {
     margin-left: 0px;
@@ -5587,6 +5622,9 @@ a.post-comments, a.post-links {
       font-size: 13px; }
     .feed-section .search .btn {
       padding: 12px 20px; } }
+@media (max-width: 428px) {
+  .single-post-section .post-company {
+    margin-top: 29px; } }
 @media (max-width: 320px) {
   .feed-section .desktop {
     width: 14.66667%;
