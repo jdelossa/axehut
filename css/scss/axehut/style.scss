@@ -182,9 +182,11 @@ input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
 /* Single Post Section Styles */
 .single-post-section{
     padding-top: 20px; 
+
     .separator:after {
        margin: 25px 0;
-        top: 0
+       top: 0;
+       border: solid 1px $silver;
     }
     h4 {
         margin-top: 25px;
@@ -198,7 +200,7 @@ input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
         text-transform: lowercase;
         bottom: 0;
     }
-    .post-details {
+    .post-detail {
         h5 {
             margin: 15px 0;
             font-weight: bold;
@@ -207,8 +209,22 @@ input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
     .post-company, .post-recruiter {
         padding: 0.7em 1em 0.7em;
         width: 155px;
-        display: block;
-        
+        display: block;  
+    }
+    .narrow {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    .post-delete {
+        margin-top: 30px;
+        .fa {
+            padding-right: 10px;
+        }
+        .btn{
+            width: 100%;
+            padding: 0.3em 1em 0.3em;
+            font-size: 18px;
+        }
     }
 }
 /* Comments Section Styles */ 
@@ -294,10 +310,11 @@ input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
     height: 48px;
     max-width: 78px;
     width: 78px;
-    /*border: none;*/
+    border: none;
     border-radius: 0; 
     position: relative;
     right: 10px;
+    padding: 0;
 }
 .user-thumbnail {
     @extend .thumbnail;
@@ -349,6 +366,7 @@ input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
     width: 72px;
     border-radius: 3px; 
     right: 0;
+    padding: 4px;
 }
 .deserved {
     @extend .rating;
@@ -433,7 +451,6 @@ a.post-comments, a.post-links {
     color: $white;
     font-weight: 400;
 }
-
 /******************************* Footer *******************************/
 .footer {
 	padding: 40px 0;
@@ -546,7 +563,7 @@ a.post-comments, a.post-links {
             height: 100%;
             width: 33% !important; 
         }
-        .post-details {
+        .post-detail, .post-delete {
             width: 33%;
             padding-left: 25px;
             float: left;
@@ -680,7 +697,8 @@ a.post-comments, a.post-links {
                 top: 7px;
             }
         }
-        .post-details {
+        .post-detail, .post-delete {
+            width: 29%;
             padding-left: 10px;
             h5 {
                 font-size: 13px;
@@ -688,6 +706,9 @@ a.post-comments, a.post-links {
         }
         .post-company, .post-recruiter {
             font-size: 10px;
+        }
+        .narrow {
+            padding: 0;
         }
         
     }

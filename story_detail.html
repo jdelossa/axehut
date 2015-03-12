@@ -92,18 +92,21 @@
                         <div class="not-deserved-btn"><a href="#"><i class="fa fa-ban"></i>No</a></div>
                     </div>
 
-                    <div class="post-details">
+                    <div class="post-detail">
                         <h5>Company:</h5>
                         <div class="post-company label single">{{post.company}}</div>
                     </div>
-                    <div class="post-details">
+                    <div class="post-detail">
                         <h5>Recruiter Involved:</h5>
                         <div class="post-recruiter label single">Not Specified</div>
+                    </div>
+                    <div class="post-delete">
+                        <a href="#" class="btn btn-danger"><i class="fa fa-times"></i>Delete Post</a>
                     </div>
                 </div>
 
                 <!-- Main Content -->
-                <div class="col-sm-9">
+                <div class="col-sm-9 narrow">
                     <!-- timestamp -->
                     <div class="post-timestamp single">
                         <p>submitted {{post.timestamp}} ago by 
