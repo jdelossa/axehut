@@ -5051,7 +5051,6 @@ ul {
   margin-bottom: 20px; }
 
 .header-static-top h3 {
-  position: absolute;
   padding: 15px;
   color: #ffffff;
   text-align: center;
@@ -5506,7 +5505,7 @@ a.post-comments, a.post-links {
     font-size: 14px; } }
 @media (max-width: 480px) {
   .header-default {
-    height: 75px;
+    height: 65px;
     margin-bottom: 30px; }
 
   .form-header {
@@ -5514,7 +5513,7 @@ a.post-comments, a.post-links {
 
   .header-static-top h3 {
     font-size: 16px;
-    padding: 8px 4px; }
+    padding: 0 4px; }
 
   .feed-section {
     /*Search*/ }
