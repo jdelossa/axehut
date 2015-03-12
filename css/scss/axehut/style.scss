@@ -420,6 +420,17 @@ input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
         background-color: darken($venice-blue, 10%);
     }
 }
+/******************************* Share Story *******************************/
+.share-story {
+    margin: 20px auto;
+    width: 100%;
+    text-align: center;
+
+    .btn {
+        background-color: $finn;
+        border-color: $bossanova;
+    }
+}
 /******************************* Post Meta *******************************/
 a.user {
     color: $trendy-pink;
@@ -716,14 +727,15 @@ a.post-comments, a.post-links {
             }
         }
         .single-story-rating {
+            height: 100px;
             h1 {
                 font-size: 40px;
-                margin-top: 0;
+                margin-top: 10px;
             }
             .text {
                 font-size: 9px;
                 position: relative;
-                top: 7px;
+                top: 8px;
             }
         }
         .post-detail {

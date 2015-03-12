@@ -5344,6 +5344,15 @@ input:focus:-ms-input-placeholder {
   .not-deserved-btn:hover {
     background-color: #042c4a; }
 
+/******************************* Share Story *******************************/
+.share-story {
+  margin: 20px auto;
+  width: 100%;
+  text-align: center; }
+  .share-story .btn {
+    background-color: #5B3256;
+    border-color: #44214d; }
+
 /******************************* Post Meta *******************************/
 a.user {
   color: #856298; }
@@ -5571,13 +5580,15 @@ a.post-comments, a.post-links {
       height: 85px; }
     .single-post-section .post-vote h4 {
       font-size: 11px; }
-    .single-post-section .single-story-rating h1 {
-      font-size: 40px;
-      margin-top: 0; }
-    .single-post-section .single-story-rating .text {
-      font-size: 9px;
-      position: relative;
-      top: 7px; }
+    .single-post-section .single-story-rating {
+      height: 100px; }
+      .single-post-section .single-story-rating h1 {
+        font-size: 40px;
+        margin-top: 10px; }
+      .single-post-section .single-story-rating .text {
+        font-size: 9px;
+        position: relative;
+        top: 8px; }
     .single-post-section .post-detail {
       padding-left: 10px; }
       .single-post-section .post-detail h5 {
