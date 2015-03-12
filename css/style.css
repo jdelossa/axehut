@@ -5194,7 +5194,8 @@ input:focus:-ms-input-placeholder {
     padding-left: 40px;
     padding-right: 40px; }
   .single-post-section .post-delete {
-    display: inline-block; }
+    text-align: right;
+    width: 100%; }
     .single-post-section .post-delete .fa {
       padding-right: 10px; }
     .single-post-section .post-delete .btn {
@@ -5479,9 +5480,7 @@ a.post-comments, a.post-links {
   .single-post-section .post-detail {
     width: 33%;
     padding-left: 25px;
-    float: left;
-    position: relative;
-    bottom: 15px; }
+    float: left; }
   .single-post-section .post-company, .single-post-section .post-recruiter {
     width: initial;
     font-size: 16px; }
@@ -5572,15 +5571,17 @@ a.post-comments, a.post-links {
     .single-post-section .post-vote h4 {
       font-size: 11px; }
     .single-post-section .single-story-rating {
-      height: 100px; }
+      height: 70px; }
       .single-post-section .single-story-rating h1 {
-        font-size: 40px;
-        margin-top: 10px; }
+        margin-top: 0;
+        font-size: 33px; }
       .single-post-section .single-story-rating .text {
-        font-size: 9px;
+        font-size: 8px;
         position: relative;
         top: 8px; }
     .single-post-section .post-detail {
+      position: relative;
+      bottom: 15px;
       padding-left: 10px; }
       .single-post-section .post-detail h5 {
         font-size: 13px; }

@@ -220,7 +220,8 @@ input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
         padding-right: 40px;
     }
     .post-delete {
-        display: inline-block;
+        text-align: right;
+        width: 100%;
         .fa {
             padding-right: 10px;
         }
@@ -585,8 +586,6 @@ a.post-comments, a.post-links {
             width: 33%;
             padding-left: 25px;
             float: left;
-            position: relative;
-            bottom: 15px;
         }
         .post-company, .post-recruiter {
             width: initial;
@@ -716,18 +715,20 @@ a.post-comments, a.post-links {
             }
         }
         .single-story-rating {
-            height: 100px;
+            height: 70px;
             h1 {
-                font-size: 40px;
-                margin-top: 10px;
+                margin-top: 0;
+                font-size: 33px;
             }
             .text {
-                font-size: 9px;
+                font-size: 8px;
                 position: relative;
                 top: 8px;
             }
         }
         .post-detail {
+            position: relative;
+            bottom: 15px;
             padding-left: 10px;
             h5 {
                 font-size: 13px;
