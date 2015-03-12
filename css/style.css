@@ -5030,7 +5030,7 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding-top: 90px; }
+  padding-top: 50px; }
 
 ul {
   list-style-type: none;
@@ -5086,8 +5086,24 @@ input[type="color"]:focus,
 .uneditable-input:focus {
   border-color: #8c8c8c;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px #cccccc;
-  outline: 0 none; }
+  outline: 0 none;
+  border-width: 2px; }
 
+input:focus::-webkit-input-placeholder {
+  color: transparent; }
+
+input:focus:-moz-placeholder {
+  color: transparent; }
+
+/* FF 4-18 */
+input:focus::-moz-placeholder {
+  color: transparent; }
+
+/* FF 19+ */
+input:focus:-ms-input-placeholder {
+  color: transparent; }
+
+/* IE 10+ */
 .text-danger {
   color: #e67e22; }
 
@@ -5140,6 +5156,12 @@ input[type="color"]:focus,
   .feed-section .post-meta {
     position: relative;
     bottom: 15px; }
+  .feed-section .post-company {
+    background-color: transparent;
+    color: #0377ba; }
+    .feed-section .post-company:hover, .feed-section .post-company:focus, .feed-section .post-company:active {
+      color: #07487a;
+      text-decoration: underline; }
 
 /* Single Post Section Styles */
 .single-post-section {
@@ -5224,7 +5246,7 @@ input[type="color"]:focus,
   height: 48px;
   max-width: 78px;
   width: 78px;
-  border: none;
+  /*border: none;*/
   border-radius: 0;
   position: relative;
   right: 10px; }
@@ -5313,6 +5335,8 @@ a.user {
 .post-title a {
   color: #333333 !important;
   text-transform: capitalize; }
+  .post-title a:hover, .post-title a:focus, .post-title a:active {
+    text-decoration: none; }
 
 .post-timestamp {
   font-size: 11px;
@@ -5448,12 +5472,12 @@ a.post-comments, a.post-links {
     height: 200px;
     padding: 20px 0; } }
 @media (min-width: 767px) {
-  .navbar {
-    padding: 20px 0;
-    -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
-    -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
-    transition: background .5s ease-in-out,padding .5s ease-in-out; }
-
+  /*.navbar {
+      padding: 20px 0;
+      -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+      -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+      transition: background .5s ease-in-out,padding .5s ease-in-out;
+  }*/
   .top-nav-collapse {
     padding: 0; }
 

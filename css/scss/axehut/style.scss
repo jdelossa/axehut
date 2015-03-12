@@ -33,7 +33,7 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding-top: 90px;
+    padding-top: 50px;
 }
 ul {
     list-style-type: none;
@@ -99,7 +99,14 @@ input[type="color"]:focus,
   border-color: darken($silver, 25%);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px $silver;
   outline: 0 none;
+  border-width: 2px;
 }
+
+input:focus::-webkit-input-placeholder { color:transparent; }
+input:focus:-moz-placeholder { color:transparent; } /* FF 4-18 */
+input:focus::-moz-placeholder { color:transparent; } /* FF 19+ */
+input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
+
 .text-danger {
     color: #e67e22;
 }
@@ -161,6 +168,14 @@ input[type="color"]:focus,
     .post-meta {
         position: relative;
         bottom: 15px;
+    }
+    .post-company {
+        background-color: transparent;
+        color: $lochmara;
+        &:hover, &:focus, &:active {
+            color: $venice-blue;
+            text-decoration: underline;
+        }
     }
 }
 
@@ -279,7 +294,7 @@ input[type="color"]:focus,
     height: 48px;
     max-width: 78px;
     width: 78px;
-    border: none;
+    /*border: none;*/
     border-radius: 0; 
     position: relative;
     right: 10px;
@@ -392,6 +407,9 @@ a.user {
 .post-title a {
     color: $mine-shaft !important;
     text-transform: capitalize;
+    &:hover,&:focus,&:active {
+        text-decoration: none;
+    }
 }
 .post-timestamp {
     font-size: 11px;
@@ -566,12 +584,12 @@ a.post-comments, a.post-links {
     }
 }
 @media(min-width: 767px){
-    .navbar {
+    /*.navbar {
         padding: 20px 0;
         -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
         -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
         transition: background .5s ease-in-out,padding .5s ease-in-out;
-    }
+    }*/
     .top-nav-collapse {
         padding: 0;
     }
