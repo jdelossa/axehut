@@ -220,15 +220,14 @@ input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
         padding-right: 40px;
     }
     .post-delete {
-        margin-top: 30px;
+        display: inline-block;
         .fa {
             padding-right: 10px;
         }
-        .btn{
-            width: 155px;
+        .btn {
             padding: 0.3em 1em 0.3em;
-            font-size: 18px;
-            margin: auto;
+            font-size: 10px;
+            margin-bottom: 10px; 
         }
     }
 }
@@ -589,19 +588,6 @@ a.post-comments, a.post-links {
             position: relative;
             bottom: 15px;
         }
-        .post-delete {
-            float: right;
-            width: 66%;
-            margin-top: 25px;
-            position: relative;
-            bottom: 15px;
-
-            .btn {
-                padding: 0.3em 0.6em 0.3em;
-                width: inherit;
-                font-size: 16px;
-            }
-        }
         .post-company, .post-recruiter {
             width: initial;
             font-size: 16px;
@@ -651,14 +637,14 @@ a.post-comments, a.post-links {
         width: 188px;
     }
     .fixed {
-        top: 70px;
+        top: 55px;
         position: fixed;
         width: 188px;
     }
 }
 @media(max-width: 500px){
     .single-post-section {
-        .post-company, .post-recruiter, .post-delete {
+        .post-company, .post-recruiter {
             font-size: 14px;
         }
         .post-company {
@@ -749,13 +735,6 @@ a.post-comments, a.post-links {
         }
         .post-company, .post-recruiter {
             font-size: 10px;
-        }
-        .post-delete {
-            margin-top: 10px;
-            .btn {
-                font-size: 10px;
-                width: 95%;
-            }
         }
         .post-company {
             margin-top: 0;
