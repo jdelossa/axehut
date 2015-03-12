@@ -5352,6 +5352,8 @@ input:focus:-ms-input-placeholder {
   .share-story .btn {
     background-color: #5B3256;
     border-color: #44214d; }
+    .share-story .btn:hover, .share-story .btn:focus, .share-story .btn:active {
+      background-color: #44214d; }
 
 /******************************* Post Meta *******************************/
 a.user {
