@@ -5199,7 +5199,7 @@ input:focus:-ms-input-placeholder {
     .single-post-section .post-delete .fa {
       padding-right: 10px; }
     .single-post-section .post-delete .btn {
-      padding: 0.3em 1em 0.3em;
+      padding: 0.3em 0.5em 0.3em;
       font-size: 10px;
       margin-bottom: 10px; }
 
@@ -5358,6 +5358,8 @@ input:focus:-ms-input-placeholder {
 /******************************* Post Meta *******************************/
 a.user {
   color: #856298; }
+  a.user:hover {
+    color: #4f3a5a; }
 
 .post-title, .post-timestamp {
   text-align: left; }
@@ -5366,7 +5368,8 @@ a.user {
   color: #333333 !important;
   text-transform: capitalize; }
   .post-title a:hover, .post-title a:focus, .post-title a:active {
-    text-decoration: none; }
+    text-decoration: none;
+    color: #44214d; }
 
 .post-timestamp {
   font-size: 11px;
@@ -5381,6 +5384,8 @@ a.user {
 a.post-comments, a.post-links {
   text-transform: lowercase;
   color: #8b8b8b; }
+  a.post-comments:hover, a.post-links:hover {
+    color: #656565; }
 
 .post-links {
   display: inline-block; }

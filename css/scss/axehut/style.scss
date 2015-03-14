@@ -226,7 +226,7 @@ input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
             padding-right: 10px;
         }
         .btn {
-            padding: 0.3em 1em 0.3em;
+            padding: 0.3em 0.5em 0.3em;
             font-size: 10px;
             margin-bottom: 10px; 
         }
@@ -437,6 +437,10 @@ input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
 /******************************* Post Meta *******************************/
 a.user {
     color: $trendy-pink;
+
+    &:hover {
+        color: darken($trendy-pink, 20%);
+    }
 }
 .post-title, .post-timestamp {
     text-align: left;
@@ -446,6 +450,7 @@ a.user {
     text-transform: capitalize;
     &:hover,&:focus,&:active {
         text-decoration: none;
+        color: $bossanova;
     }
 }
 .post-timestamp {
@@ -461,6 +466,9 @@ a.user {
 a.post-comments, a.post-links {
     text-transform: lowercase;
     color: $gray;
+    &:hover {
+        color: darken($gray, 15%);
+    }
 }
 .post-links {
     display: inline-block;
