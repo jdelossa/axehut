@@ -5174,6 +5174,7 @@ input:focus:-ms-input-placeholder {
     top: 0;
     border: solid 1px #cccccc; }
   .single-post-section h4 {
+    text-align: center;
     margin-top: 25px;
     text-transform: capitalize;
     font-weight: bold; }
