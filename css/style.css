@@ -5050,6 +5050,7 @@ ul {
 /******************************* Header static top *******************************/
 .header-default {
   background-color: #856298;
+  border-bottom: solid 1px #411f49;
   height: 100px;
   margin-bottom: 20px; }
 
@@ -5203,7 +5204,7 @@ input:focus:-ms-input-placeholder {
       padding: 0.3em 0.5em 0.3em;
       font-size: 10px;
       margin-bottom: 10px;
-      border: none !important; }
+      border-color: transparent; }
 
 /* Comments Section Styles */
 .comments-section .comments .btn {
@@ -5406,7 +5407,7 @@ a.post-comments, a.post-links {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 190px; }
+  height: 180px; }
   .footer a {
     color: #cdcdcd; }
     .footer a:hover {

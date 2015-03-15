@@ -59,6 +59,7 @@ ul {
 .header-default {
 	@extend .navbar-default;
 	background-color: $trendy-pink;
+    border-bottom: solid 1px darken($bossanova, 1%);
 	height: 100px;
     margin-bottom: 20px;
 }
@@ -230,7 +231,7 @@ input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
             padding: 0.3em 0.5em 0.3em;
             font-size: 10px;
             margin-bottom: 10px;
-            border: none !important; 
+            border-color: transparent; 
         }
     }
 }
@@ -489,7 +490,7 @@ a.post-comments, a.post-links {
 	position: absolute;
   	bottom: 0;
   	width: 100%;
-  	height: 190px;
+  	height: 180px;
 
 	a {
 		color: $off-white;
