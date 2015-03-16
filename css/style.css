@@ -5524,12 +5524,12 @@ a.post-comments, a.post-links {
     padding-top: 90px; }
 
   .aside {
+    position: relative;
     width: 188px; }
 
-  .fixed {
-    top: 55px;
-    position: fixed;
-    width: 188px; } }
+  .affix {
+    position: fixed !important;
+    top: 150px; } }
 @media (max-width: 500px) {
   .single-post-section .post-company, .single-post-section .post-recruiter {
     font-size: 14px; }
